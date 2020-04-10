@@ -7,6 +7,7 @@ do tworzenia tabel używek.
 Komentarze w kodzie wyjaśniają dzaiałanie poszczególnych fragmentów
 
 #Do omówienia: 
+
 Póki co baza znajduje się w głównym pliku aplikacji.
 Jednak wygodniejesze wydaje się umieszczenie wszystkich definicji klas w osobnym pliku.
 Jak się jednak okazuje, trzeba ostro pożąglować plikami w projekcie apki, aby to normalnie działało.
