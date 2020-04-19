@@ -1,14 +1,7 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-#from user_database import db
 from sqlalchemy.ext.declarative import declared_attr
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///drug_database.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'True'
+from formapp import db
 
-
-db = SQLAlchemy(app) #tworzenie obiektu bazy danych
 
 
 class User(db.Model): # definiowanie tabeli
@@ -51,25 +44,4 @@ class Kakaonuss(Gibon):
     id = db.Column(db.Integer, primary_key=True)
 
 
-db.create_all() # utworzenie bazy danych z tabelami określonymi powyżej
-db.drop_all() # czyszczenie bazy (przy każdym odświerzeniu dodaje nowe rekordy)
 
-
-@app.route('/')
-def hello_world():
-    print("Poszło") # info o odpaleniu stronki
-
-    user = User('W', 22, 'Szczawnica') # utworzenie rekordu do tabeli User
-    muskatnuss = Muskatnuss(10, 5, 8, 3) # utworzenie rekordu do tabeli Muskatnus
-    kakaonuss = Kakaonuss(6, 6, 6, 6)
-    db.session.add(user)    # INSERT'owanie rekordów do tabeli
-    db.session.add(muskatnuss)
-    db.session.add(kakaonuss)
-    db.session.commit() # zatwierdzenie dodania rekordu (uzyskanie ID)
-
-    return "Witaj świecie"
-
-
-db.create_all()
-if __name__ == '__main__':
-    app.run()
