@@ -29,13 +29,26 @@ def save_first_form():
     print(selected_drugs_list)
     db.session.add(user) # testowe dodatnie do bazy danych rekordu
     db.session.commit()
-    return render_template('drugForm.html')
+    return redirect('/drugForm')
 
 
 @app.route('/drugForm') # wyświetlenie drugiego formularza formularza
 def show_drugtForm():
-    return render_template('frugForm.html')
+    return render_template('drugForm.html')
 
-@app.route('/saveDrug')
+
+@app.route('/saveDrug', methods=['POST'])
 def save_drug_form():
+    print("Selected values list:", request.form)
+    print("Example for 'damage':", request.form['damage'])
+    print("It's type is:", type(int(request.form['damage'])))
+    damage = int(request.form['damage'])
+    f_damage = int(request.form['f_damage'])
+    temp_drug_id = 1
+    last_user_record = db.session.query(User).order_by(User.id.desc()).first()
+    temp_user_id = last_user_record.id
+    print("Last user ID:", temp_user_id)
+    drug = Drug(temp_drug_id, temp_user_id, damage, f_damage)
+    db.session.add(drug)
+    db.session.commit()
     return redirect('/')

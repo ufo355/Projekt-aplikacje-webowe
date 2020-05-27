@@ -3,7 +3,6 @@ from sqlalchemy.ext.declarative import declared_attr
 from formapp import db # import obiektu db z pliku __init__.py
 
 
-
 class User(db.Model): # definiowanie tabeli
     __tablename__ = 'user_data'
     id = db.Column(db.Integer, primary_key=True)
@@ -26,6 +25,7 @@ class SpecificDrug(db.Model): # definiowanie tabeli z naszymi narkotykami
 
     def __init__(self, name):# dodawanie danych do odpowiadających im pól
         self.name = name
+
 
 class Drug(db.Model): # tabela z wynikamoi na odpowiedzi do pytań i narkotyków
     __tablename__ = 'drug'
