@@ -9,10 +9,10 @@ from flask import render_template, request, redirect, session
 def hello_world():
     print("Poszło")                             # info o odpaleniu stronki
     db.create_all()                             # utworzenie bazy danych z tabelami określonymi w pliku user_database.py
-    has_children = User.selected_drugs.any()    # tutaj sprawdzam czy są relację i printuję w logu flaska
-    q = db.session.query(User, has_children)
-    for parent, has_children in q.all():
-        print(parent, has_children)
+    # has_children = User.selected_drugs.any()    # tutaj sprawdzam czy są relację i printuję w logu flaska
+    # q = db.session.query(User, has_children)
+    # for parent, has_children in q.all():
+    #     print(parent, has_children)
     return render_template('welcome.html')
 
 
@@ -25,10 +25,10 @@ def show_firstForm():
 def save_first_form():                     # (odpala akcję /save w formularzu)
     age = request.form['age']              # bierze tablicę/słownik POST i przypisuje do zmiennej lokalnej wartosć
     user = User("M", age, "Karakan")       # wpisaną przez użytkownika
-    selected_drugs_list = request.form
-    print(selected_drugs_list)             # sprawdzam co się wyświetla po zaznaczeniu checkbocksów
-    user_dict = selected_drugs_list.to_dict()
-    print("Only keys:", user_dict.keys())
+    user_selected = request.form
+    print(user_selected)             # sprawdzam co się wyświetla po zaznaczeniu checkbocksów
+    user_selected_dict = user_selected.to_dict()
+    print("Only keys:", user_selected_dict.keys())
     db.session.add(user) # testowe dodatnie do bazy danych rekordu
     print("Before flush:",user.id)
     db.session.commit()
@@ -36,15 +36,25 @@ def save_first_form():                     # (odpala akcję /save w formularzu)
     user_id = user.id
     print(user_id)
     session["user_id"] = user_id           # używam sesji, bo POST działa tlyko dla wskazanych adresów
-    for word, el in user_dict.items():
-        session[word] = el
+    iterating_list = []
+    for word, el in user_selected_dict.items():
+        if word == "age":
+            continue
+        else:
+            iterating_list.append(el)
 
+    session["drug_list"] = iterating_list
+    session["drug_list_len"] = len(iterating_list)
+    session["current_drug"] = 0
     return redirect('/drugForm')           # przekierowanie na adres /drugForm
 
 
 @app.route('/drugForm')  # wyświetlenie drugiego formularza formularza
 def show_drugForm():
-    return render_template('drugForm.html')
+    if session["current_drug"] == session["drug_list_len"]:
+        return redirect('/')
+    else:
+        return render_template('drugForm.html', value = session["drug_list"][session["current_drug"]])
 
 
 @app.route('/saveDrug', methods=['POST'])   # zapisywanie tego co zostało wybrane w formularzu z konkretnym narkotykiem
@@ -61,4 +71,5 @@ def save_drug_form():
     drug = Drug(temp_drug_id, temp_user_id, damage, f_damage)  # utworzenie rekordu do bazy Drug
     db.session.add(drug)
     db.session.commit()
-    return redirect('/')    # powrót na stronę głóną
+    session["current_drug"] += 1
+    return redirect('/drugForm')    # powrót na stronę głóną
