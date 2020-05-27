@@ -1,5 +1,5 @@
 from formapp import app, db
-from formapp.user_database import User, Gibon, Muskatnuss, Kakaonuss, SpecificDrug, Drug
+from formapp.user_database import User, SpecificDrug, Drug
 from flask import render_template, request, redirect
 
 
@@ -9,22 +9,33 @@ from flask import render_template, request, redirect
 def hello_world():
     print("Poszło") # info o odpaleniu stronki
     db.create_all()  # utworzenie bazy danych z tabelami określonymi powyżej
-    # user = User('W', 22, 'Szczawnica') # utworzenie rekordu do tabeli User
-    # muskatnuss = Muskatnuss(10, 5, 8, 3) # utworzenie rekordu do tabeli Muskatnus
-    # kakaonuss = Kakaonuss(6, 6, 6, 6)
-    # db.session.add(user)    # INSERT'owanie rekordów do tabel
-    # db.session.add(muskatnuss)
-    # db.session.add(kakaonuss)
-    # db.session.commit() # zatwierdzenie dodania rekordów (uzyskanie ID)
+    has_children = User.selected_drugs.any()
+    q = db.session.query(User, has_children)
+    for parent, has_children in q.all():
+        print(parent, has_children)
+    return render_template('welcome.html')
 
-    return render_template('form.html')
 
-@app.route("/save", methods=['POST']) # zapisywanie tego co zostało wklepane do formularza (odpala akcję /save w formularzu)
-def save():
+@app.route('/firstForm') # wyświetlenie pierwszego formularza
+def show_firstForm():
+    return render_template('firstForm.html')
+
+
+@app.route("/saveFirst", methods=['POST']) # zapisywanie tego co zostało wklepane do formularza (odpala akcję /save w formularzu)
+def save_first_form():
     age = request.form['age']
     user = User("M", age, "Karakan")
     selected_drugs_list = request.form
     print(selected_drugs_list)
     db.session.add(user) # testowe dodatnie do bazy danych rekordu
     db.session.commit()
+    return render_template('drugForm.html')
+
+
+@app.route('/drugForm') # wyświetlenie drugiego formularza formularza
+def show_drugtForm():
+    return render_template('frugForm.html')
+
+@app.route('/saveDrug')
+def save_drug_form():
     return redirect('/')

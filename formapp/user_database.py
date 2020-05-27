@@ -27,7 +27,7 @@ class SpecificDrug(db.Model): # definiowanie tabeli z naszymi narkotykami
     def __init__(self, name):# dodawanie danych do odpowiadających im pól
         self.name = name
 
-class Drug(db.Model):
+class Drug(db.Model): # tabela z wynikamoi na odpowiedzi do pytań i narkotyków
     __tablename__ = 'drug'
     id = db.Column(db.Integer, primary_key=True)
     id_drug = db.Column(db.Integer, db.ForeignKey("specific_drug.id"))
@@ -46,31 +46,33 @@ class Drug(db.Model):
         self.society_avg= familly_damage * 0.7
 
 
-class Gibon(db.Model): # definiowanie Klasy tabeli abstrakcyjnej do używek
-    __abstract__ = True
-    @declared_attr
-    def person(cls):    # konieczna jest taka definicja dla klucza obcego
-        return db.Column(db.Integer, db.ForeignKey('user_data.id'))
-    frequency = db.Column(db.Integer)
-    self_damage = db.Column(db.Integer)
-    public_damage = db.Column(db.Integer)
-    legality = db.Column(db.Integer)
+# Zostawiam w razie czego, może się przyda abstracyjna jeszcze
 
-    def __init__(self, frequency, self_damage, public_damage, legality): # dodawanie danych do odpowiadających im pól
-        self.frequency = frequency
-        self.self_damage = self_damage
-        self.public_damage = public_damage
-        self.legality = legality
-
-
-class Muskatnuss(Gibon):        # przy każdej dziedzieczkonej klasie należy definiować osobny dla niej klucz główny
-    __tablename__ = 'muskatnuss'
-    id = db.Column(db.Integer, primary_key=True)
-
-
-class Kakaonuss(Gibon):
-    __tablename__ = 'kakaonuss'
-    id = db.Column(db.Integer, primary_key=True)
+# class Gibon(db.Model): # definiowanie Klasy tabeli abstrakcyjnej do używek
+#     __abstract__ = True
+#     @declared_attr
+#     def person(cls):    # konieczna jest taka definicja dla klucza obcego
+#         return db.Column(db.Integer, db.ForeignKey('user_data.id'))
+#     frequency = db.Column(db.Integer)
+#     self_damage = db.Column(db.Integer)
+#     public_damage = db.Column(db.Integer)
+#     legality = db.Column(db.Integer)
+#
+#     def __init__(self, frequency, self_damage, public_damage, legality): # dodawanie danych do odpowiadających im pól
+#         self.frequency = frequency
+#         self.self_damage = self_damage
+#         self.public_damage = public_damage
+#         self.legality = legality
+#
+#
+# class Muskatnuss(Gibon):        # przy każdej dziedzieczkonej klasie należy definiować osobny dla niej klucz główny
+#     __tablename__ = 'muskatnuss'
+#     id = db.Column(db.Integer, primary_key=True)
+#
+#
+# class Kakaonuss(Gibon):
+#     __tablename__ = 'kakaonuss'
+#     id = db.Column(db.Integer, primary_key=True)
 
 
 
