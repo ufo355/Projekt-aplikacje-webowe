@@ -1,6 +1,6 @@
 from formapp import app, db
 from formapp.user_database import User, SpecificDrug, Drug
-from flask import render_template, request, redirect
+from flask import render_template, request, redirect, session
 
 
 # Tutaj też trzeba (chyba) umieścić ewntualne funkcje POST itd.
@@ -27,13 +27,23 @@ def save_first_form():                     # (odpala akcję /save w formularzu)
     user = User("M", age, "Karakan")       # wpisaną przez użytkownika
     selected_drugs_list = request.form
     print(selected_drugs_list)             # sprawdzam co się wyświetla po zaznaczeniu checkbocksów
+    user_dict = selected_drugs_list.to_dict()
+    print("Only keys:", user_dict.keys())
     db.session.add(user) # testowe dodatnie do bazy danych rekordu
+    print("Before flush:",user.id)
     db.session.commit()
+    db.session.refresh(user)
+    user_id = user.id
+    print(user_id)
+    session["user_id"] = user_id           # używam sesji, bo POST działa tlyko dla wskazanych adresów
+    for word, el in user_dict.items():
+        session[word] = el
+
     return redirect('/drugForm')           # przekierowanie na adres /drugForm
 
 
-@app.route('/drugForm') # wyświetlenie drugiego formularza formularza
-def show_drugtForm():
+@app.route('/drugForm')  # wyświetlenie drugiego formularza formularza
+def show_drugForm():
     return render_template('drugForm.html')
 
 
