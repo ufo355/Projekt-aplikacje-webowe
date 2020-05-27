@@ -36,7 +36,7 @@ class Drug(db.Model): # tabela z wynikamoi na odpowiedzi do pytań i narkotyków
     familly_damage = db.Column(db.Integer)
     self_avg = db.Column(db.Float)
     society_avg = db.Column(db.Float)
-
+# test czy ad
     def __init__(self, id_drug, id_user, damage, familly_damage):
         self.id_drug = id_drug
         self.id_user = id_user
