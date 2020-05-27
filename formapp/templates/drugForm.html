@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body>           <!-- action -> odnośnik do funkcji w routes.py -->
     <form role="form" action="/saveDrug" method="post">
     <h3>Pytanie o substancje</h3>
     <!--<div class="form-group">-->
         <p>Damage</p>
 {#        <label for="damage_1">1</label>#}
-        <input type="radio" name="damage" id="damage_1" value="1">1 (very low) <!-- musi być taka sama nazwa, żeby przyciski radiowe -->
+        <input type="radio" name="damage" id="damage_1" value="1">1 (very low)
 {#        <label for="damage_2">2</label>#}
-        <input type="radio" name="damage" id="damage_2" value="2">2 (low) <!-- należały do tej samej grupy -->
+        <!-- musi być taka sama nazwa (name), żeby przyciski radiowe
+        należały do tej samej grupy -->
+        <input type="radio" name="damage" id="damage_2" value="2">2 (low)
 {#        <label for="damage_3">3</label>#}
         <input type="radio" name="damage" id="damage_3" value="3">3 (high)
 {#        <label for="damage_4">4</label>#}

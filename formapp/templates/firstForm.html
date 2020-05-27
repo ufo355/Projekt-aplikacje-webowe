@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body>           <!-- action -> odnośnik do funkcji w routes.py -->
     <form role="form" action="/saveFirst" method="post">
     <h3>Personal data</h3>
     <!--<div class="form-group">-->
@@ -19,7 +19,11 @@
         <br>
         <label for="gmuszkatuowa">Gałka muszkauowa</label>
         <input type="checkbox" name="gmuszkatuowa" id="gmuszkatuowa" value="Gmuszkatuowa">
-
+    <!-- Gdy checkbox jest zaznaczony, przesyłana jest warość 'name' oraz 'value'
+    Gdy checkbox nie jest zaznaczony, nic nie jest wysyłane
+    To wszystko się chyba zapisuje w zmiennej/tablicy POST
+    Bardzo możliwe, że nie trzeba będzie tworzyć osobnej zmiennej,
+    ale za to czyścić POSTa po działaniu użytkownika (uzupełniania arkusza) -->
         <button type="submit" class="btn btn-primary">Zatwierdź</button>
 </form>
 
