@@ -7,8 +7,8 @@ from flask import render_template, request, redirect, session
 
 @app.route('/') # ten fragment przekierowuje do formularza HTML
 def hello_world():
-    print("Poszło")                             # info o odpaleniu stronki
-    db.create_all()                             # utworzenie bazy danych z tabelami określonymi w pliku user_database.py
+    print("Poszło hello_world")                             # info o odpaleniu stronki
+                                # utworzenie bazy danych z tabelami określonymi w pliku user_database.py
     # has_children = User.selected_drugs.any()    # tutaj sprawdzam czy są relację i printuję w logu flaska
     # q = db.session.query(User, has_children)
     # for parent, has_children in q.all():
@@ -65,8 +65,7 @@ def save_drug_form():
     damage = int(request.form['damage'])
     f_damage = int(request.form['f_damage'])
     temp_drug_id = 1    # chwilowa zmienna id narkotyku, dopóki nie ma bazy z narkotykami
-    last_user_record = db.session.query(User).order_by(User.id.desc()).first() # wybranie ostatnio doadanego użytkowniaka
-    temp_user_id = last_user_record.id # wydobycie id od niego
+    temp_user_id = session["user_id"]
     print("Last user ID:", temp_user_id)
     drug = Drug(temp_drug_id, temp_user_id, damage, f_damage)  # utworzenie rekordu do bazy Drug
     db.session.add(drug)
