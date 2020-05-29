@@ -1,6 +1,8 @@
 # Projekt-aplikacje-webowe
-###**Jeżeli jesteś Frontem - patrz od razu sekcja 'Foldery'**
-###Jeżeli jesteś Backiem - nie zapomnij omieszkać sekcji  **'W przypadku rozwoju'**
+
+**Jeżeli jesteś Frontem - patrz od razu sekcja 'Foldery'**
+
+Jeżeli jesteś Backiem - nie zapomnij omieszkać sekcji  **'W przypadku rozwoju'**
 
 
 Zaprojektowanie struktury aplikacji na pakiety (packages).
