@@ -1,6 +1,7 @@
 from formapp import app, db
+from formapp.forms import AddUserForm
 from formapp.user_database import User, SpecificDrug, Drug, specific_drug_check
-from flask import render_template, request, redirect, session
+from flask import render_template, request, redirect, session, url_for
 
 
 # Tutaj też trzeba (chyba) umieścić ewntualne funkcje POST itd.
@@ -16,45 +17,94 @@ def hello_world():
     return render_template('welcome.html')
 
 
-@app.route('/firstForm') # wyświetlenie pierwszego formularza
-def show_firstForm():
-    return render_template('firstForm.html')    # renderowanie strony na podstawie pliku firstForm.html
+@app.route('/addUser', methods=['GET', 'POST'])
+def addUser(): # to
+    '''
+    Tutaj tworzymy obiekt formularza wtf z pliku forms.py odpowiedzialny za dodawanie użytkownika,
+    klasa formularza dokładniej opisana w pliku forms.py
+    '''
+    form = AddUserForm()
+    '''Zapisujemy tutaj dane z bazy danych w postaci słownikowej (chyba tak to się nazywa) i dodajemy do formularza '''
+    all_records = SpecificDrug.query.all()
+    form.drugs.choices = [(drug_name.id, drug_name.name) for drug_name in all_records]
+
+    '''Tutaj jest warunek, jesli przycisk sumbit został kliknięty dane z formularza są zapisywane'''
+    if form.validate_on_submit():
+        sex = form.sex.data
+        city = form.city.data
+        age = form.age.data
+        drugs = form.data['drugs']
+
+        #sprawdzono - działa
+        '''po utworzeniu użytkownika w sesji zapisywany jest jego id oraz lista narkotyków którą zaznaczył'''
+        user = User(sex,age,city)
+        session['drugs'] = drugs
+        # session['drugs'] = drugs
+        db.session.add(user)
+        db.session.commit()
+        db.session.refresh(user)
+        session['user_id'] = user.id
+        '''przekierowanie do formularza z odpowiedziami'''
+        drugs_dict = {}  # Słownik do wyświetlania nazw w formularzach, gdzie kluczem jest id drug
+        for dr_id in drugs:
+            drugs_dict[str(dr_id)] = all_records[dr_id-1].name #  id w formularzu zaczynają się od 0 nie od 1 jak w tabeli
+        session["drugs_dict"] = drugs_dict
+        session["current_drug"] = 0
+        session["drug_list_len"] = len(drugs)
+        print("Test:", session["drugs_dict"])
+        return redirect('/drugForm')
+
+    '''Zaciągnięty obiekt formularza przesyłamy do wyrenderowanego pliku html, '''
+    return render_template('addUser.html', form=form)
 
 
-@app.route("/saveFirst", methods=['POST']) # zapisywanie tego co zostało wklepane do formularza
-def save_first_form():                     # (odpala akcję /save w formularzu)
-    age = request.form['age']              # bierze tablicę/słownik POST i przypisuje do zmiennej lokalnej wartosć
-    user = User("M", age, "Karakan")       # wpisaną przez użytkownika
-    user_selected = request.form
-    print(user_selected)             # sprawdzam co się wyświetla po zaznaczeniu checkbocksów
-    user_selected_dict = user_selected.to_dict()
-    print("Only keys:", user_selected_dict.keys())
-    db.session.add(user) # testowe dodatnie do bazy danych rekordu
-    print("Before flush:", user.id)
-    db.session.commit()
-    db.session.refresh(user)
-    user_id = user.id
-    print(user_id)
-    session["user_id"] = user_id           # używam sesji, bo POST działa tlyko dla wskazanych adresów
-    iterating_list = []
-    for word, el in user_selected_dict.items():
-        if word == "age":
-            continue
-        else:
-            iterating_list.append(el)
 
-    session["drug_list"] = iterating_list
-    session["drug_list_len"] = len(iterating_list)
-    session["current_drug"] = 0
-    return redirect('/drugForm')           # przekierowanie na adres /drugForm
+
+
+
+''' Chwilowe zakomentowanie wersji'''
+# @app.route('/firstForm') # wyświetlenie pierwszego formularza
+# def show_firstForm():
+#     return render_template('firstForm.html')    # renderowanie strony na podstawie pliku firstForm.html
+#
+#
+# @app.route("/saveFirst", methods=['POST']) # zapisywanie tego co zostało wklepane do formularza
+# def save_first_form():                     # (odpala akcję /save w formularzu)
+#     age = request.form['age']              # bierze tablicę/słownik POST i przypisuje do zmiennej lokalnej wartosć
+#     user = User("M", age, "Karakan")       # wpisaną przez użytkownika
+#     user_selected = request.form
+#     print(user_selected)             # sprawdzam co się wyświetla po zaznaczeniu checkbocksów
+#     user_selected_dict = user_selected.to_dict()
+#     print("Only keys:", user_selected_dict.keys())
+#     db.session.add(user) # testowe dodatnie do bazy danych rekordu
+#     print("Before flush:", user.id)
+#     db.session.commit()
+#     db.session.refresh(user)
+#     user_id = user.id
+#     print(user_id)
+#     session["user_id"] = user_id           # używam sesji, bo POST działa tlyko dla wskazanych adresów
+#     iterating_list = []
+#     for word, el in user_selected_dict.items():
+#         if word == "age":
+#             continue
+#         else:
+#             iterating_list.append(el)
+#
+#     session["drug_list"] = iterating_list
+#     session["drug_list_len"] = len(iterating_list)
+#     session["current_drug"] = 0
+#     return redirect('/drugForm')           # przekierowanie na adres /drugForm
 
 
 @app.route('/drugForm')  # wyświetlenie drugiego formularza formularza
 def show_drugForm():
     if session["current_drug"] == session["drug_list_len"]:
+        session.clear
         return redirect('/')
     else:
-        return render_template('drugForm.html', value = session["drug_list"][session["current_drug"]])
+        print("current:", session["current_drug"])
+        print("drug list:", session['drugs'])
+        return render_template('drugForm.html', value = session["drugs_dict"][str(session['drugs'][session["current_drug"]])])
 
 
 @app.route('/saveDrug', methods=['POST'])   # zapisywanie tego co zostało wybrane w formularzu z konkretnym narkotykiem
@@ -75,6 +125,9 @@ def save_drug_form():
 
 
 specific_drug_check() # tafunkcja robi to co kod poniżej (zostawiłem tutaj na zaś, wystarczy odkomentować)
+# aha, jakby ktoś się dziwił czemu to jest tutaj, a nie w __init__.py
+# to jest w tym miejscu, ponieważ cały ten plik (czyli routes.py) jest importowany
+# na końcu pliku init. Gdyby osobno importować tam ta funkcję, to są problemy z importami
 
 # rows = db.session.query(SpecificDrug).count()
 # print("Current number of records in 'specific_drug':", rows)

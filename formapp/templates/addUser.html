@@ -1,0 +1,24 @@
+
+{% block content %}
+<div class="jumbotron">
+  <h1>Lorem ipsum</h1>
+  <p>Add a new User with the form below:</p>
+  <form method="POST">
+      {# This hidden_tag is a CSRF security feature. #}
+      {{ form.hidden_tag() }}
+      {{ form.sex.label }} {{ form.sex() }}
+      {{ form.city.label }} {{ form.city() }}
+      {{ form.age.label }} {{ form.age() }}
+      <table>
+            <tr>
+                <td>
+                    {{ form.drugs }}
+                </td>
+                <td width="20"></td>
+            </tr>
+
+        </table>
+      {{ form.submit() }}
+  </form>
+</div>
+{% endblock %}

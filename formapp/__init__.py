@@ -14,3 +14,4 @@ print("Start")
 from formapp import routes # tutaj teoretycznie wczytuje się ten plik routes i tak jakby pod tym jest cały kompletny skrypt pajtona
                            # więc pewnie tutaj trzeba inicjalizowac bazy danych
 db.create_all()
+
