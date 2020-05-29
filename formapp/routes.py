@@ -1,5 +1,5 @@
 from formapp import app, db
-from formapp.user_database import User, SpecificDrug, Drug
+from formapp.user_database import User, SpecificDrug, Drug, specific_drug_check
 from flask import render_template, request, redirect, session
 
 
@@ -30,7 +30,7 @@ def save_first_form():                     # (odpala akcję /save w formularzu)
     user_selected_dict = user_selected.to_dict()
     print("Only keys:", user_selected_dict.keys())
     db.session.add(user) # testowe dodatnie do bazy danych rekordu
-    print("Before flush:",user.id)
+    print("Before flush:", user.id)
     db.session.commit()
     db.session.refresh(user)
     user_id = user.id
@@ -72,3 +72,32 @@ def save_drug_form():
     db.session.commit()
     session["current_drug"] += 1
     return redirect('/drugForm')    # powrót na stronę głóną
+
+
+specific_drug_check() # tafunkcja robi to co kod poniżej (zostawiłem tutaj na zaś, wystarczy odkomentować)
+
+# rows = db.session.query(SpecificDrug).count()
+# print("Current number of records in 'specific_drug':", rows)
+# if rows == 14:      # proste zabezpieczenie, aby baza danych miała naszą liste narkotyków przy starcie
+#     pass            # aplikacji. Prosta bo nie sprawdza na bieżaco, ani nie czy ktoś coś podmienił
+# else:
+#     db.session.query(SpecificDrug).delete()
+#     d1 = SpecificDrug('Alkohol')  # Tworzę obiekty klasy Drug_name (rekordy tabeli)
+#     d2 = SpecificDrug('Heroina')
+#     d3 = SpecificDrug('Kokaina')
+#     d4 = SpecificDrug('Metaamfetamina')
+#     d5 = SpecificDrug('Tytoń')
+#     d6 = SpecificDrug('Amfetamina')
+#     d7 = SpecificDrug('Marihuana')
+#     d8 = SpecificDrug('MDMA')
+#     d9 = SpecificDrug('Mefedron')
+#     d10 = SpecificDrug('LSD')
+#     d11 = SpecificDrug('Psylocybina')
+#     d12 = SpecificDrug('Ketamina')
+#     d13 = SpecificDrug('DXM')
+#     d14 = SpecificDrug('DMT')
+#     db.session.add_all([d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14])
+#     print("End of statement")
+#     rows = db.session.query(SpecificDrug).count()
+#     print("After adding all:", rows)
+#     db.session.commit()

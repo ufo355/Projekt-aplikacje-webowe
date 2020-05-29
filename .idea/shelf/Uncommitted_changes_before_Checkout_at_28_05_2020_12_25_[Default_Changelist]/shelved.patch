@@ -1,0 +1,685 @@
+Index: .idea/dataSources.local.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/dataSources.local.xml	(date 1590656538818)
++++ .idea/dataSources.local.xml	(date 1590656538818)
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="dataSourceStorageLocal">
++    <data-source name="drug_database" uuid="0be4661b-54cb-40cc-9881-9242766b9144">
++      <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1" exact-driver-version="3.25">
++        <identifier-quote-string>&quot;</identifier-quote-string>
++      </database-info>
++      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
++      <auth-provider>no-auth</auth-provider>
++      <schema-mapping>
++        <introspection-scope>
++          <node kind="schema" qname="@" />
++        </introspection-scope>
++      </schema-mapping>
++    </data-source>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(date 1590661446477)
++++ .idea/workspace.xml	(date 1590661446477)
+@@ -0,0 +1,478 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="BranchesTreeState">
++    <expand>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </expand>
++    <select>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="BRANCH:origin/back-end" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </select>
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="44c5a65e-6b2e-404b-bfd1-6472581aeffd" name="Default Changelist" comment="Zapisywanie id nie z bazy, tylko z sesji" />
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Flask Main" />
++        <option value="HTML File" />
++        <option value="Python Script" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Rebase.Settings">
++    <option name="ONTO" value="refs/remotes/origin/AppStructure" />
++  </component>
++  <component name="Git.Settings">
++    <branch-grouping />
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="Bartłomiej" />
++      </map>
++    </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="JupyterTrust" id="10bb3077-88fb-4550-ab27-814de8042040" />
++  <component name="ProjectId" id="1cRUL48rCYgtnATA3vXcUt129XK" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++    <option name="showMembers" value="true" />
++  </component>
++  <component name="PropertiesComponent">
++    <property name="DatabaseDriversLRU" value="sqlite" />
++    <property name="DefaultHtmlFileTemplate" value="HTML File" />
++    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
++    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
++    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
++    <property name="WebServerToolWindowFactoryState" value="false" />
++    <property name="database.console.LAST_STATE" value="true" />
++    <property name="full.screen.before.presentation.mode" value="false" />
++    <property name="last_opened_file_path" value="$USER_HOME$/anaconda3/envs/Deep" />
++    <property name="node.js.detected.package.eslint" value="true" />
++    <property name="node.js.detected.package.tslint" value="true" />
++    <property name="node.js.path.for.package.eslint" value="project" />
++    <property name="node.js.path.for.package.tslint" value="project" />
++    <property name="node.js.selected.package.eslint" value="(autodetect)" />
++    <property name="node.js.selected.package.tslint" value="(autodetect)" />
++    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
++    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
++    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
++  </component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\Konradeu\PycharmProjects\Projekt-Webowe\Projekt-aplikacje-webowe\formapp\templates" />
++    </key>
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\Konradeu\PycharmProjects\Projekt-Webowe\Projekt-aplikacje-webowe\formapp" />
++    </key>
++  </component>
++  <component name="RunManager" selected="Python.run">
++    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
++      <module name="Projekt-aplikacje-webowe" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <envs>
++        <env name="PYTHONUNBUFFERED" value="1" />
++      </envs>
++      <option name="SDK_HOME" value="C:\Users\Konradeu\anaconda3\envs\Deep\python.exe" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
++      <option name="IS_MODULE_SDK" value="false" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
++      <option name="PARAMETERS" value="" />
++      <option name="SHOW_COMMAND_LINE" value="false" />
++      <option name="EMULATE_TERMINAL" value="false" />
++      <option name="MODULE_MODE" value="false" />
++      <option name="REDIRECT_INPUT" value="false" />
++      <option name="INPUT_FILE" value="" />
++      <method v="2" />
++    </configuration>
++    <configuration name="Flask (formapp/__init__.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
++      <module name="Projekt-aplikacje-webowe" />
++      <option name="target" value="$PROJECT_DIR$/formapp/__init__.py" />
++      <option name="targetType" value="PATH" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
++      <option name="IS_MODULE_SDK" value="true" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
++      <option name="launchJavascriptDebuger" value="false" />
++      <method v="2" />
++    </configuration>
++    <configuration name="Projekt-aplikacje-webowe" type="Python.FlaskServer">
++      <option name="flaskDebug" value="true" />
++      <module name="Projekt-aplikacje-webowe" />
++      <option name="target" value="$PROJECT_DIR$/run.py" />
++      <option name="targetType" value="PATH" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <option name="SDK_HOME" value="C:\Users\Konradeu\anaconda3\envs\Projekt-aplikacje-webowe\python.exe" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
++      <option name="IS_MODULE_SDK" value="false" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
++      <option name="launchJavascriptDebuger" value="false" />
++      <method v="2" />
++    </configuration>
++    <list>
++      <item itemvalue="Flask server.Projekt-aplikacje-webowe" />
++      <item itemvalue="Flask server.Flask (formapp/__init__.py)" />
++      <item itemvalue="Python.run" />
++    </list>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Python.run" />
++        <item itemvalue="Flask server.Flask (formapp/__init__.py)" />
++        <item itemvalue="Python.run" />
++        <item itemvalue="Flask server.Flask (formapp/__init__.py)" />
++        <item itemvalue="Python.run" />
++      </list>
++    </recent_temporary>
++  </component>
++  <component name="SvnConfiguration">
++    <configuration />
++  </component>
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="44c5a65e-6b2e-404b-bfd1-6472581aeffd" name="Default Changelist" comment="" />
++      <created>1587293143076</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1587293143076</updated>
++      <workItem from="1587293147364" duration="3398000" />
++      <workItem from="1587297570678" duration="937000" />
++      <workItem from="1587298646868" duration="2453000" />
++      <workItem from="1587642129043" duration="13000" />
++      <workItem from="1587652197393" duration="4000" />
++      <workItem from="1589713230728" duration="833000" />
++      <workItem from="1589746381360" duration="707000" />
++      <workItem from="1590490842632" duration="286000" />
++      <workItem from="1590491140662" duration="7888000" />
++      <workItem from="1590516387818" duration="11708000" />
++      <workItem from="1590570485160" duration="17386000" />
++      <workItem from="1590593356310" duration="1053000" />
++      <workItem from="1590594417204" duration="2248000" />
++      <workItem from="1590596992646" duration="29000" />
++      <workItem from="1590597126218" duration="5642000" />
++      <workItem from="1590608245602" duration="9449000" />
++      <workItem from="1590655062788" duration="1469000" />
++      <workItem from="1590656562862" duration="375000" />
++      <workItem from="1590660123522" duration="1178000" />
++    </task>
++    <task id="LOCAL-00001" summary="Utworzenie projektu i edycja READEME.md">
++      <created>1587293376240</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1587293376240</updated>
++    </task>
++    <task id="LOCAL-00002" summary="Dodanie kodu do app.py z brancha Database, oraz pliku user_database.py">
++      <created>1587295166755</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1587295166755</updated>
++    </task>
++    <task id="LOCAL-00003" summary="Przerobienie projektu bazy danych z brancha &quot;Database&quot; na &quot;pakietową&quot; formę projektu aplikacji.">
++      <created>1587306222235</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1587306222235</updated>
++    </task>
++    <task id="LOCAL-00004" summary="Zrobienie bazy danych tak jak  w &quot;dokumentacji&quot; oraz dodanie prostego formularza testowego">
++      <created>1590574077988</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1590574077988</updated>
++    </task>
++    <task id="LOCAL-00005" summary="Zrobienie 2 romularzy testowych do uzupełnienia">
++      <created>1590584871777</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1590584871777</updated>
++    </task>
++    <task id="LOCAL-00006" summary="Dodoałem dodawanie rekordów do tabeli &quot;Drug&quot; wraz z zapisywaniem ID użytwkownika, który obecnie wypełania ankietę">
++      <created>1590587647068</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1590587647068</updated>
++    </task>
++    <task id="LOCAL-00007" summary="Testowanie tych debilnych branchy">
++      <created>1590595126049</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1590595126049</updated>
++    </task>
++    <task id="LOCAL-00008" summary="Test czy Adrian ma rację :D">
++      <created>1590595812273</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1590595812273</updated>
++    </task>
++    <task id="LOCAL-00009" summary="Dodanie większej ilości komentarzy, edycja README.md, oraz dodanie README.md do folderu 'templates'">
++      <created>1590603223872</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1590603223872</updated>
++    </task>
++    <task id="LOCAL-00010" summary="Dodanie sesji, w celu przechowywania danych użytkownika">
++      <created>1590613940099</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1590613940099</updated>
++    </task>
++    <task id="LOCAL-00011" summary="Dodanie iterowania po formularzach z narkotykami UWAGA!!! - trza zabezpieczyć rabio buttony przed brakiem zaznaczenia">
++      <created>1590619618874</created>
++      <option name="number" value="00011" />
++      <option name="presentableId" value="LOCAL-00011" />
++      <option name="project" value="LOCAL" />
++      <updated>1590619618874</updated>
++    </task>
++    <task id="LOCAL-00012" summary="Zapisywanie id nie z bazy, tylko z sesji">
++      <created>1590656790321</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1590656790321</updated>
++    </task>
++    <option name="localTasksCounter" value="13" />
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="2" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="origin/back-end" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
++          </value>
++        </entry>
++      </map>
++    </option>
++    <option name="RECENT_FILTERS">
++      <map>
++        <entry key="Branch">
++          <value>
++            <list>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="AppStructure" />
++                </option>
++              </RecentGroup>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="origin/AppStructure" />
++                </option>
++              </RecentGroup>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="origin/master" />
++                </option>
++              </RecentGroup>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="HEAD" />
++                </option>
++              </RecentGroup>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="origin/AW-5" />
++                </option>
++              </RecentGroup>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="origin/Database" />
++                </option>
++              </RecentGroup>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="origin/back-end" />
++                </option>
++              </RecentGroup>
++            </list>
++          </value>
++        </entry>
++      </map>
++    </option>
++    <option name="oldMeFiltersMigrated" value="true" />
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Utworzenie projektu i edycja READEME.md" />
++    <MESSAGE value="Dodanie kodu do app.py z brancha Database, oraz pliku user_database.py" />
++    <MESSAGE value="Przerobienie projektu bazy danych z brancha &quot;Database&quot; na &quot;pakietową&quot; formę projektu aplikacji." />
++    <MESSAGE value="Zrobienie bazy danych tak jak  w &quot;dokumentacji&quot; oraz dodanie prostego formularza testowego" />
++    <MESSAGE value="Zrobienie 2 romularzy testowych do uzupełnienia" />
++    <MESSAGE value="Dodoałem dodawanie rekordów do tabeli &quot;Drug&quot; wraz z zapisywaniem ID użytwkownika, który obecnie wypełania ankietę" />
++    <MESSAGE value="Testowanie tych debilnych branchy" />
++    <MESSAGE value="Test czy Adrian ma rację :D" />
++    <MESSAGE value="Dodanie większej ilości komentarzy, edycja README.md, oraz dodanie README.md do folderu 'templates'" />
++    <MESSAGE value="Dodanie sesji, w celu przechowywania danych użytkownika" />
++    <MESSAGE value="Dodanie iterowania po formularzach z narkotykami UWAGA!!! - trza zabezpieczyć rabio buttony przed brakiem zaznaczenia" />
++    <MESSAGE value="Zapisywanie id nie z bazy, tylko z sesji" />
++    <option name="LAST_COMMIT_MESSAGE" value="Zapisywanie id nie z bazy, tylko z sesji" />
++  </component>
++  <component name="WindowStateProjectService">
++    <state x="2590" y="178" key="#Projekt-aplikacje-webowe" timestamp="1590493779823">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="2590" y="178" key="#Projekt-aplikacje-webowe/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590493779823" />
++    <state x="2672" y="378" key="#Scopes" timestamp="1590661285720">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="2672" y="378" key="#Scopes/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590661285720" />
++    <state x="2334" y="175" width="1043" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590656301633">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="331" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590601150469" />
++    <state x="2334" y="175" width="1043" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590656301633" />
++    <state x="2609" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1590491034976">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="2609" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590491034976" />
++    <state x="1940" y="107" key="CommitChangelistDialog2" timestamp="1590593667156">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="1940" y="107" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590593667156" />
++    <state x="2012" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1590593308212">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="2012" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590593308212" />
++    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1590656936161">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590600870567" />
++    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590656936161" />
++    <state width="1877" height="241" key="GridCell.Tab.0.bottom" timestamp="1590656939703">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state width="1877" height="281" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1590588812233">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state width="1877" height="281" key="GridCell.Tab.0.bottom.inPresentationMode/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590588812233" />
++    <state width="1493" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590608712571" />
++    <state width="1877" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590656939703" />
++    <state width="1877" height="241" key="GridCell.Tab.0.center" timestamp="1590656939703">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state width="1877" height="281" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1590588812233">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state width="1877" height="281" key="GridCell.Tab.0.center.inPresentationMode/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590588812233" />
++    <state width="1493" height="241" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590608712570" />
++    <state width="1877" height="241" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590656939703" />
++    <state width="1877" height="241" key="GridCell.Tab.0.left" timestamp="1590656939703">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state width="1877" height="281" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1590588812233">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state width="1877" height="281" key="GridCell.Tab.0.left.inPresentationMode/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590588812233" />
++    <state width="1493" height="241" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590608712569" />
++    <state width="1877" height="241" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590656939703" />
++    <state width="1877" height="241" key="GridCell.Tab.0.right" timestamp="1590656939703">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state width="1877" height="281" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1590588812233">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state width="1877" height="281" key="GridCell.Tab.0.right.inPresentationMode/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590588812233" />
++    <state width="1493" height="241" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590608712571" />
++    <state width="1877" height="241" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590656939703" />
++    <state x="505" y="89" width="914" height="707" key="SettingsEditor" timestamp="1590601137409">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="505" y="89" width="914" height="707" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590601137409" />
++    <state x="2545" y="112" width="998" height="708" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590597005523" />
++    <state x="3062" y="106" key="VCS.ChangeListViewerDialog" timestamp="1590592891521">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="3062" y="106" key="VCS.ChangeListViewerDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590592891521" />
++    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1590661001341">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590603434915" />
++    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590661001341" />
++    <state x="2331" y="357" key="VcsDiffUtil.ChangesDialog" timestamp="1590593188354">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="2331" y="357" key="VcsDiffUtil.ChangesDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590593188354" />
++    <state x="484" y="146" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1590603160840">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="484" y="146" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590603160840" />
++    <state x="615" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590604244156">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="615" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590604244156" />
++    <state x="2689" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590593535954" />
++    <state x="2583" y="233" key="git4idea.branch.GitSmartOperationDialog" timestamp="1590591934845">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="2583" y="233" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590591934845" />
++    <state x="2172" y="496" key="git4idea.merge.GitMergeDialog" timestamp="1590593157103">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="2172" y="496" key="git4idea.merge.GitMergeDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590593157103" />
++    <state x="2555" y="315" key="git4idea.rebase.GitRebaseDialog" timestamp="1590593393094">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="2555" y="315" key="git4idea.rebase.GitRebaseDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590593393094" />
++    <state x="2645" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1590593380813">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="2645" y="421" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590593380813" />
++    <state x="2095" y="271" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1590593339146">
++      <screen x="1920" y="0" width="1920" height="1040" />
++    </state>
++    <state x="2095" y="271" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590593339146" />
++  </component>
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/Projekt_aplikacje_webowe$run.coverage" NAME="run Coverage Results" MODIFIED="1590656623179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/Projekt_aplikacje_webowe$Projekt_aplikacje_webowe.coverage" NAME="Projekt-aplikacje-webowe Coverage Results" MODIFIED="1590600970982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/Projekt_aplikacje_webowe$Flask__formapp___init___py_.coverage" NAME="Flask (formapp/__init__.py) Coverage Results" MODIFIED="1587296875274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/dataSources/0be4661b-54cb-40cc-9881-9242766b9144.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/dataSources/0be4661b-54cb-40cc-9881-9242766b9144.xml	(date 1590656358851)
++++ .idea/dataSources/0be4661b-54cb-40cc-9881-9242766b9144.xml	(date 1590656358851)
+@@ -0,0 +1,117 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<dataSource name="drug_database">
++  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.18">
++    <root id="1">
++      <ServerVersion>3.25.1</ServerVersion>
++    </root>
++    <schema id="2" parent="1" name="main">
++      <Current>1</Current>
++    </schema>
++    <collation id="3" parent="1" name="BINARY"/>
++    <collation id="4" parent="1" name="NOCASE"/>
++    <collation id="5" parent="1" name="RTRIM"/>
++    <table id="6" parent="2" name="drug"/>
++    <table id="7" parent="2" name="specific_drug"/>
++    <table id="8" parent="2" name="sqlite_master">
++      <System>1</System>
++    </table>
++    <table id="9" parent="2" name="user_data"/>
++    <column id="10" parent="6" name="id">
++      <Position>1</Position>
++      <DataType>INTEGER|0s</DataType>
++      <NotNull>1</NotNull>
++    </column>
++    <column id="11" parent="6" name="id_drug">
++      <Position>2</Position>
++      <DataType>INTEGER|0s</DataType>
++    </column>
++    <column id="12" parent="6" name="id_user">
++      <Position>3</Position>
++      <DataType>INTEGER|0s</DataType>
++    </column>
++    <column id="13" parent="6" name="damage">
++      <Position>4</Position>
++      <DataType>INTEGER|0s</DataType>
++    </column>
++    <column id="14" parent="6" name="familly_damage">
++      <Position>5</Position>
++      <DataType>INTEGER|0s</DataType>
++    </column>
++    <column id="15" parent="6" name="self_avg">
++      <Position>6</Position>
++      <DataType>FLOAT|0s</DataType>
++    </column>
++    <column id="16" parent="6" name="society_avg">
++      <Position>7</Position>
++      <DataType>FLOAT|0s</DataType>
++    </column>
++    <key id="17" parent="6">
++      <ColNames>id</ColNames>
++      <Primary>1</Primary>
++    </key>
++    <foreign-key id="18" parent="6">
++      <ColNames>id_drug</ColNames>
++      <RefTableName>specific_drug</RefTableName>
++      <RefColNames>id</RefColNames>
++    </foreign-key>
++    <foreign-key id="19" parent="6">
++      <ColNames>id_user</ColNames>
++      <RefTableName>user_data</RefTableName>
++      <RefColNames>id</RefColNames>
++    </foreign-key>
++    <column id="20" parent="7" name="id">
++      <Position>1</Position>
++      <DataType>INTEGER|0s</DataType>
++      <NotNull>1</NotNull>
++    </column>
++    <column id="21" parent="7" name="name">
++      <Position>2</Position>
++      <DataType>VARCHAR|0s</DataType>
++    </column>
++    <key id="22" parent="7">
++      <ColNames>id</ColNames>
++      <Primary>1</Primary>
++    </key>
++    <column id="23" parent="8" name="type">
++      <Position>1</Position>
++      <DataType>text|0s</DataType>
++    </column>
++    <column id="24" parent="8" name="name">
++      <Position>2</Position>
++      <DataType>text|0s</DataType>
++    </column>
++    <column id="25" parent="8" name="tbl_name">
++      <Position>3</Position>
++      <DataType>text|0s</DataType>
++    </column>
++    <column id="26" parent="8" name="rootpage">
++      <Position>4</Position>
++      <DataType>int|0s</DataType>
++    </column>
++    <column id="27" parent="8" name="sql">
++      <Position>5</Position>
++      <DataType>text|0s</DataType>
++    </column>
++    <column id="28" parent="9" name="id">
++      <Position>1</Position>
++      <DataType>INTEGER|0s</DataType>
++      <NotNull>1</NotNull>
++    </column>
++    <column id="29" parent="9" name="sex">
++      <Position>2</Position>
++      <DataType>CHAR|0s</DataType>
++    </column>
++    <column id="30" parent="9" name="town">
++      <Position>3</Position>
++      <DataType>VARCHAR|0s</DataType>
++    </column>
++    <column id="31" parent="9" name="age">
++      <Position>4</Position>
++      <DataType>INTEGER|0s</DataType>
++    </column>
++    <key id="32" parent="9">
++      <ColNames>id</ColNames>
++      <Primary>1</Primary>
++    </key>
++  </database-model>
++</dataSource>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml	(date 1590660139912)
++++ .idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml	(date 1590660139912)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_rebase_[Default_Changelist]" date="1590593226550" recycled="false" toDelete="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Default Changelist]" />
++</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/shelved.patch	(date 1590593226543)
++++ .idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/shelved.patch	(date 1590593226543)
+@@ -0,0 +1,25 @@
++Index: formapp/routes.py
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>from formapp import app, db\r\nfrom formapp.user_database import User, SpecificDrug, Drug\r\nfrom flask import render_template, request, redirect\r\n\r\n\r\n# Tutaj też trzeba (chyba) umieścić ewntualne funkcje POST itd.\r\n\r\n@app.route('/') # ten fragment przekierowuje do formularza HTML\r\ndef hello_world():\r\n    print(\"Poszło\") # info o odpaleniu stronki\r\n    db.create_all()  # utworzenie bazy danych z tabelami określonymi powyżej\r\n    has_children = User.selected_drugs.any()\r\n    q = db.session.query(User, has_children)\r\n    for parent, has_children in q.all():\r\n        print(parent, has_children)\r\n    return render_template('welcome.html')\r\n\r\n\r\n@app.route('/firstForm') # wyświetlenie pierwszego formularza\r\ndef show_firstForm():\r\n    return render_template('firstForm.html')\r\n\r\n\r\n@app.route(\"/saveFirst\", methods=['POST']) # zapisywanie tego co zostało wklepane do formularza (odpala akcję /save w formularzu)\r\ndef save_first_form():\r\n    age = request.form['age']\r\n    user = User(\"M\", age, \"Karakan\")\r\n    selected_drugs_list = request.form\r\n    print(selected_drugs_list)\r\n    db.session.add(user) # testowe dodatnie do bazy danych rekordu\r\n    db.session.commit()\r\n    return redirect('/drugForm')\r\n\r\n\r\n@app.route('/drugForm') # wyświetlenie drugiego formularza formularza\r\ndef show_drugtForm():\r\n    return render_template('drugForm.html')\r\n\r\n\r\n@app.route('/saveDrug', methods=['POST'])\r\ndef save_drug_form():\r\n    print(\"Selected values list:\", request.form)\r\n    print(\"Example for 'damage':\", request.form['damage'])\r\n    print(\"It's type is:\", type(int(request.form['damage'])))\r\n    damage = int(request.form['damage'])\r\n    f_damage = int(request.form['f_damage'])\r\n    temp_drug_id = 1\r\n    last_user_record = db.session.query(User).order_by(User.id.desc()).first()\r\n    temp_user_id = last_user_record.id\r\n    print(\"Last user ID:\", temp_user_id)\r\n    drug = Drug(temp_drug_id, temp_user_id, damage, f_damage)\r\n    db.session.add(drug)\r\n    db.session.commit()\r\n    return redirect('/')\r\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- formapp/routes.py	(revision 8512b20312d8d76b2fc9379c8cdeb5d36d117086)
+++++ formapp/routes.py	(date 1590587802509)
++@@ -42,11 +42,11 @@
++     print("Selected values list:", request.form)
++     print("Example for 'damage':", request.form['damage'])
++     print("It's type is:", type(int(request.form['damage'])))
++-    damage = int(request.form['damage'])
++-    f_damage = int(request.form['f_damage'])
+++    damage = int(request.form['damage'])        # zamieniam na int, bo "value" z formularza trafia jako STRING
+++    f_damage = int(request.form['f_damage'])    # i nie można mnożyć tych wyników
++     temp_drug_id = 1
++-    last_user_record = db.session.query(User).order_by(User.id.desc()).first()
++-    temp_user_id = last_user_record.id
+++    last_user_record = db.session.query(User).order_by(User.id.desc()).first() # zapytnanie służące do wybrania ostatnio dodanego rekordu
+++    temp_user_id = last_user_record.id # wyłuskanie id tego rekordu
++     print("Last user ID:", temp_user_id)
++     drug = Drug(temp_drug_id, temp_user_id, damage, f_damage)
++     db.session.add(drug)
