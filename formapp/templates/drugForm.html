@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>           <!-- action -> odnośnik do funkcji w routes.py -->
+    <form role="form" action="/saveDrug" method="post">
+    <h3>Pytanie o {{ value }}</h3>
+    <!--<div class="form-group">-->
+        <p>Damage</p>
+{#        <label for="damage_1">1</label>#}
+        <input type="radio" name="damage" id="damage_1" value="1" required>1 (very low)
+{#        <label for="damage_2">2</label>#}
+        <!-- musi być taka sama nazwa (name), żeby przyciski radiowe
+        należały do tej samej grupy -->
+        <input type="radio" name="damage" id="damage_2" value="2">2 (low)
+{#        <label for="damage_3">3</label>#}
+        <input type="radio" name="damage" id="damage_3" value="3">3 (high)
+{#        <label for="damage_4">4</label>#}
+        <input type="radio" name="damage" id="damage_4" value="4">4 (very high)
+        <br>
+        <p>Familly damage</p>
+{#        <label for="f_damage_1">1</label>#}
+        <input type="radio" name="f_damage" id="f_damage_1" value="1" required>1 (very low)
+{#        <label for="f_damage_2">2</label>#}
+        <input type="radio" name="f_damage" id="f_damage_2" value="2">2 (low)
+{#        <label for="f_damage_3">3</label>#}
+        <input type="radio" name="f_damage" id="f_damage_3" value="3">3 (high)
+{#        <label for="f_damage_4">4</label>#}
+        <input type="radio" name="f_damage" id="f_damage_4" value="4">4 (very high)
+
+        <button type="submit" class="btn btn-primary">Zatwierdź</button>
+</form>
+</body>
+</html>
