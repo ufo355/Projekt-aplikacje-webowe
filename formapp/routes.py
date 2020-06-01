@@ -4,8 +4,8 @@ from formapp.user_database import User, SpecificDrug, Drug, specific_drug_check
 from flask import render_template, request, redirect, session, url_for
 
 
-# Tutaj też trzeba (chyba) umieścić ewntualne funkcje POST itd.
-
+# Tutaj też trzeba (chyba) umieścić ewntualne funkcje POST itd.\
+db.create_all()
 @app.route('/') # ten fragment przekierowuje do formularza HTML
 def hello_world():
     print("Poszło hello_world")                             # info o odpaleniu stronki
@@ -60,8 +60,8 @@ def show_drugQuestionsForm():
         session.clear
         return redirect('/')
     else:
-        print("current:", session["current_drug"])
-        print("drug list:", session['drugs'])
+        print("current drug:", session['drugs'][session["current_drug"]])
+        print("drug list:", session['drugs']) # wyświetla numety jak w bazie dancyh, wybranych narkotyków
         return render_template('drugQuestionsForm.html', value = session["drugs_dict"][str(session['drugs'][session["current_drug"]])])
 
 
@@ -70,13 +70,30 @@ def save_drug_form():
     print("Selected values list:", request.form)    # tutaj akurat sprawdzam co się wysyła/odbiera
     print("Example for 'crit_1':", request.form['crit_1'])
     print("It's type is:", type(int(request.form['crit_1'])))
-    damage = int(request.form['crit_1'])
-    f_damage = int(request.form['f_damage'])
-    print(request.form['f_damage'])
-    temp_drug_id = 1    # chwilowa zmienna id narkotyku, dopóki nie ma bazy z narkotykami
-    temp_user_id = session["user_id"]
+    '''Szkodliwość dla organizmu'''
+    crit_1 = int(request.form['crit_1'])
+    crit_2 = int(request.form['crit_2'])
+    crit_3 = int(request.form['crit_3'])
+    crit_4 = int(request.form['crit_4'])
+    crit_5 = int(request.form['crit_5'])
+    crit_6 = int(request.form['crit_6'])
+    crit_7 = int(request.form['crit_7'])
+    crit_8 = int(request.form['crit_8'])
+    crit_9 = int(request.form['crit_9'])
+    crit_10 = int(request.form['crit_10'])
+    crit_11 = int(request.form['crit_11'])
+    crit_12 = int(request.form['crit_12'])
+    '''Skodliwość dla społeczeństwa'''
+    crit_13 = int(request.form['crit_13'])
+    crit_14 = int(request.form['crit_14'])
+    crit_15 = int(request.form['crit_15'])
+    crit_16 = int(request.form['crit_16'])
+    crit_17 = int(request.form['crit_17'])
+    crit_18 = int(request.form['crit_18'])
+    temp_drug_id = session['drugs'][session["current_drug"]]  # zapisywanie id substancji
+    temp_user_id = session["user_id"]   # zapisywanie id aktualnego użytkownika
     print("Last user ID:", temp_user_id)
-    drug = Drug(temp_drug_id, temp_user_id, damage, f_damage)  # utworzenie rekordu do bazy Drug
+    drug = Drug(temp_drug_id, temp_user_id, crit_1, crit_2, crit_3, crit_4, crit_5, crit_6, crit_7, crit_8, crit_9, crit_10, crit_11, crit_12, crit_13, crit_14, crit_15, crit_16, crit_17, crit_18)  # utworzenie rekordu do bazy Drug
     db.session.add(drug)
     db.session.commit()
     session["current_drug"] += 1

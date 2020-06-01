@@ -25,10 +25,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab9b0642-93bf-4be3-acd3-c435d575f506" name="Default Changelist" comment="TAAAAAAAAK- Dodałem kod matiego i zaadoptowałem do przełączania formularzy #killme. Ale powinno działać">
+    <list default="true" id="ab9b0642-93bf-4be3-acd3-c435d575f506" name="Default Changelist" comment="Fomularzy i usunięcie niepotrzebnych komentarzy">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formapp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/formapp/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/formapp/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/formapp/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/formapp/templates/drugForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/formapp/templates/drugQuestionsForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formapp/templates/drugQuestionsForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/formapp/templates/drugQuestionsForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/formapp/user_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/formapp/user_database.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +55,7 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -118,7 +122,7 @@
       <workItem from="1590663870473" duration="880000" />
       <workItem from="1590680023224" duration="3373000" />
       <workItem from="1590738301136" duration="14610000" />
-      <workItem from="1590998101576" duration="2011000" />
+      <workItem from="1590998101576" duration="4774000" />
     </task>
     <task id="LOCAL-00001" summary="Dodałęm Bartkową częsć - (dodałęm też do commita jakieś pliki z workspacea, nw cy komuś to nie pobruździ w pycharmie XDDD)">
       <created>1590741398033</created>
@@ -141,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590752231854</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fomularzy i usunięcie niepotrzebnych komentarzy">
+      <created>1591000131933</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591000131933</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,56 +185,67 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Dodałęm Bartkową częsć - (dodałęm też do commita jakieś pliki z workspacea, nw cy komuś to nie pobruździ w pycharmie XDDD)" />
     <MESSAGE value="TAAAAAAAAK- Dodałem kod matiego i zaadoptowałem do przełączania formularzy #killme. Ale powinno działać" />
-    <option name="LAST_COMMIT_MESSAGE" value="TAAAAAAAAK- Dodałem kod matiego i zaadoptowałem do przełączania formularzy #killme. Ale powinno działać" />
+    <MESSAGE value="Fomularzy i usunięcie niepotrzebnych komentarzy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fomularzy i usunięcie niepotrzebnych komentarzy" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2590" y="127" key="#Flask" timestamp="1590662917980">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2590" y="127" key="#Flask/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590662917980" />
-    <state x="2306" y="167" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590662958856">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="309" y="132" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591002310494">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="309" y="132" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591002310494" />
     <state x="2306" y="167" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590662958856" />
-    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1590662916541">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="505" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591002222936">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="505" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591002222936" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591002201672">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591002201672" />
+    <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1591002302671">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591002302671" />
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590662916541" />
-    <state width="1493" height="181" key="GridCell.Tab.0.bottom" timestamp="1591000074863">
+    <state width="1493" height="181" key="GridCell.Tab.0.bottom" timestamp="1591002477890">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1590680284006">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom.inPresentationMode/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590680284006" />
-    <state width="1493" height="181" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591000074863" />
+    <state width="1493" height="181" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591002477890" />
     <state width="1877" height="244" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590756118706" />
-    <state width="1493" height="181" key="GridCell.Tab.0.center" timestamp="1591000074863">
+    <state width="1493" height="181" key="GridCell.Tab.0.center" timestamp="1591002477890">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1590680284006">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center.inPresentationMode/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590680284006" />
-    <state width="1493" height="181" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591000074863" />
+    <state width="1493" height="181" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591002477890" />
     <state width="1877" height="244" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590756118706" />
-    <state width="1493" height="181" key="GridCell.Tab.0.left" timestamp="1591000074862">
+    <state width="1493" height="181" key="GridCell.Tab.0.left" timestamp="1591002477890">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1590680284005">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left.inPresentationMode/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590680284005" />
-    <state width="1493" height="181" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591000074862" />
+    <state width="1493" height="181" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591002477890" />
     <state width="1877" height="244" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590756118706" />
-    <state width="1493" height="181" key="GridCell.Tab.0.right" timestamp="1591000074863">
+    <state width="1493" height="181" key="GridCell.Tab.0.right" timestamp="1591002477890">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1590680284006">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right.inPresentationMode/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590680284006" />
-    <state width="1493" height="181" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591000074863" />
+    <state width="1493" height="181" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591002477890" />
     <state width="1877" height="244" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590756118706" />
     <state x="2635" y="124" key="SettingsEditor" timestamp="1590680540196">
       <screen x="1920" y="0" width="1920" height="1040" />
@@ -233,13 +255,21 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590752240938" />
+    <state x="349" y="67" key="com.intellij.database.dbimport.ImportDialog" timestamp="1591002226763">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="67" key="com.intellij.database.dbimport.ImportDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591002226763" />
     <state x="2689" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590756074217">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2689" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590756074217" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1591000475470">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591000475470" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Projekt_aplikacje_webowe$Flask__run_py_.coverage" NAME="Flask (run.py) Coverage Results" MODIFIED="1591000074851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Projekt_aplikacje_webowe$Flask__run_py_.coverage" NAME="Flask (run.py) Coverage Results" MODIFIED="1591002959791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Projekt_aplikacje_webowe$Flask.coverage" NAME="Flask Coverage Results" MODIFIED="1590751963294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

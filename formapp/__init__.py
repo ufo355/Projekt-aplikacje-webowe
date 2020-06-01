@@ -11,7 +11,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'True' # to jest chyba do debbugo
 app.secret_key = "69twoja_stara420" # klucz potrzebny do sesji
 db = SQLAlchemy(app)  # tworzenie obiektu bazy danych
 print("Start")
+
 from formapp import routes # tutaj teoretycznie wczytuje się ten plik routes i tak jakby pod tym jest cały kompletny skrypt pajtona
                            # więc pewnie tutaj trzeba inicjalizowac bazy danych
-db.create_all()
+''' UWAGA!!! - przeniesione db.createAll() do routes, było to konieczne, bo tworzyło bazę dopiero po wszytkich liniach
+kodu pliku routes. Teraz jest tam na początku o wszystko działą cacy'''
 
