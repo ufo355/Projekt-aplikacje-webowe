@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>           <!-- action -> odnośnik do funkcji w routes.py -->
+    <!-- Dla każdego komu to bd potrzebne: pytania są ponumerowane po kolei, tak jak w pliku "Kryteria.txt"
+    czyli, grupa chcecboxów "crit_1" tyczy się pierwszego pytania z ww pliku -->
+    <form role="form" action="/saveDrugQuestions" method="post">
+        <h3>Pytanie o {{ value }}</h3>
+    <!--<div class="form-group">-->
+        <p>Szkodliwość dla organizmu</p>
+        <input type="radio" name="crit_1" value="1" required>1 (very low)
+        <!-- musi być taka sama nazwa (name), żeby przyciski radiowe
+        należały do tej samej grupy -->
+        <input type="radio" name="crit_1" value="2">2 (low)
+        <input type="radio" name="crit_1" value="3">3 (medium)
+        <input type="radio" name="crit_1" value="4">4 (high)
+        <input type="radio" name="crit_1" value="5">5 (very high)
+
+        <br>
+        <p>Łatwość przedawkowania</p>
+        <input type="radio" name="crit_2" value="1" required>1 (very low)
+        <input type="radio" name="crit_2" value="2">2 (low)
+        <input type="radio" name="crit_2" value="3">3 (medium)
+        <input type="radio" name="crit_2" value="4">4 (high)
+        <input type="radio" name="crit_3" value="5">5 (very high)
+
+        <p>Wyższe prawdopodobieństwo choroby psychicznej, depresji, samobójstwa</p>
+        <input type="radio" name="crit_3" value="1" required>1 (very low)
+        <input type="radio" name="crit_3" value="2">2 (low)
+        <input type="radio" name="crit_3" value="3">3 (medium)
+        <input type="radio" name="crit_3" value="4">4 (high)
+        <input type="radio" name="crit_3" value="5">5 (very high)
+
+         <p>Choroby zakaźne nabyte podczas przyjmowania</p>
+        <input type="radio" name="crit_4" value="1" required>1 (very low)
+        <input type="radio" name="crit_4" value="2">2 (low)
+        <input type="radio" name="crit_4" value="3">3 (medium)
+        <input type="radio" name="crit_4" value="4">4 (high)
+        <input type="radio" name="crit_4" value="5">5 (very high)
+
+        <p>Problemy ukladu krazenia</p>
+        <input type="radio" name="crit_5" value="1" required>1 (very low)
+        <input type="radio" name="crit_5" value="2">2 (low)
+        <input type="radio" name="crit_5" value="3">3 (medium)
+        <input type="radio" name="crit_5" value="4">4 (high)
+        <input type="radio" name="crit_5" value="5">5 (very high)
+
+        <p>Uzależnienie</p>
+        <input type="radio" name="crit_6" value="1" required>1 (very low)
+        <input type="radio" name="crit_6" value="2">2 (low)
+        <input type="radio" name="crit_6" value="3">3 (medium)
+        <input type="radio" name="crit_6" value="4">4 (high)
+        <input type="radio" name="crit_6" value="5">5 (very high)
+
+        <p>Trądzik i inne zmiany skórne </p>
+        <input type="radio" name="crit_7" value="1" required>1 (very low)
+        <input type="radio" name="crit_7" value="2">2 (low)
+        <input type="radio" name="crit_" value="3">3 (medium)
+        <input type="radio" name="crit_7" value="4">4 (high)
+        <input type="radio" name="crit_7" value="5">5 (very high)
+
+        <p>Probemy z układem odpornościowym</p>
+        <input type="radio" name="crit_8" value="1" required>1 (very low)
+        <input type="radio" name="crit_8" value="2">2 (low)
+        <input type="radio" name="crit_8" value="3">3 (medium)
+        <input type="radio" name="crit_8" value="4">4 (high)
+        <input type="radio" name="crit_8" value="5">5 (very high)
+
+        <p>Problemy jamy ustnej	</p>
+        <input type="radio" name="crit_9" value="1" required>1 (very low)
+        <input type="radio" name="crit_9" value="2">2 (low)
+        <input type="radio" name="crit_9" value="3">3 (medium)
+        <input type="radio" name="crit_9" value="4">4 (high)
+        <input type="radio" name="crit_9" value="5">5 (very high)
+
+        <p>Bezsenność</p>
+        <input type="radio" name="crit_10" value="1" required>1 (very low)
+        <input type="radio" name="crit_10" value="2">2 (low)
+        <input type="radio" name="crit_10" value="3">3 (medium)
+        <input type="radio" name="crit_10" value="4">4 (high)
+        <input type="radio" name="crit_10" value="5">5 (very high)
+
+        <p>Otumanienie	</p>
+        <input type="radio" name="crit_11" value="1" required>1 (very low)
+        <input type="radio" name="crit_11" value="2">2 (low)
+        <input type="radio" name="crit_11" value="3">3 (medium)
+        <input type="radio" name="crit_11" value="4">4 (high)
+        <input type="radio" name="crit_11" value="5">5 (very high)
+
+        <p>Wahania nastroju</p>
+        <input type="radio" name="crit_12" value="1" required>1 (very low)
+        <input type="radio" name="crit_12" value="2">2 (low)
+        <input type="radio" name="crit_12" value="3">3 (medium)
+        <input type="radio" name="crit_12" value="4">4 (high)
+        <input type="radio" name="crit_12" value="5">5 (very high)
+
+        <p>Ryzyko skrzywdzenia innych pod wpływem substancji</p>
+        <input type="radio" name="crit_13" value="1" required>1 (very low)
+        <input type="radio" name="crit_13" value="2">2 (low)
+        <input type="radio" name="crit_13" value="3">3 (medium)
+        <input type="radio" name="crit_13" value="4">4 (high)
+        <input type="radio" name="crit_13" value="5">5 (very high)
+
+        <p>Ryzyko podejowania działań sprzecznych z prawem</p>
+        <input type="radio" name="crit_14" value="1" required>1 (very low)
+        <input type="radio" name="crit_14" value="2">2 (low)
+        <input type="radio" name="crit_14" value="3">3 (medium)
+        <input type="radio" name="crit_14" value="4">4 (high)
+        <input type="radio" name="crit_14" value="5">5 (very high)
+
+        <p>Szkoda dla rodziny</p>
+        <input type="radio" name="crit_15" value="1" required>1 (very low)
+        <input type="radio" name="crit_15" value="2">2 (low)
+        <input type="radio" name="crit_15" value="3">3 (medium)
+        <input type="radio" name="crit_15" value="4">4 (high)
+        <input type="radio" name="crit_15" value="5">5 (very high)
+
+
+        <p>Zaniedbywanie obowiązków</p>
+        <input type="radio" name="crit_16" value="1" required>1 (very low)
+        <input type="radio" name="crit_16" value="2">2 (low)
+        <input type="radio" name="crit_16" value="3">3 (medium)
+        <input type="radio" name="crit_16" value="4">4 (high)
+        <input type="radio" name="crit_16" value="5">5 (very high)
+
+        <p>Utrata relacji z bliskimi</p>
+        <input type="radio" name="crit_17" value="1" required>1 (very low)
+        <input type="radio" name="crit_17" value="2">2 (low)
+        <input type="radio" name="crit_17" value="3">3 (medium)
+        <input type="radio" name="crit_17" value="4">4 (high)
+        <input type="radio" name="crit_17" value="5">5 (very high)
+
+        <p>Degradacja statusu społecznego</p>
+        <input type="radio" name="crit_18" value="1" required>1 (very low)
+        <input type="radio" name="crit_18" value="2">2 (low)
+        <input type="radio" name="crit_18" value="3">3 (medium)
+        <input type="radio" name="crit_18" value="4">4 (high)
+        <input type="radio" name="crit_18" value="5">5 (very high)
+
+        <button type="submit" class="btn btn-primary">Zatwierdź</button>
+</form>
+</body>
+</html>

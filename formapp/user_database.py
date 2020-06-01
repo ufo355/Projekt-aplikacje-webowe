@@ -43,7 +43,7 @@ class Drug(db.Model): # tabela z wynikamoi na odpowiedzi do pytań i narkotyków
         self.damage = damage
         self.familly_damage = familly_damage
         self.self_avg = damage * 0.5
-        self.society_avg= familly_damage * 0.7
+        self.society_avg = familly_damage * 0.7
 
 
 def specific_drug_check():
@@ -72,7 +72,9 @@ def specific_drug_check():
         rows = db.session.query(SpecificDrug).count()
         print("After adding all:", rows)
         db.session.commit()
-# Zostawiam w razie czego, może się przyda klasa (tabel) abstracyjna jeszcze
+
+
+''' Zostawiam w razie czego, może się przyda klasa (tabel) abstracyjna jeszcze '''
 
 # class Gibon(db.Model): # definiowanie Klasy tabeli abstrakcyjnej do używek
 #     __abstract__ = True
