@@ -1,14 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>No siema byczqu</h1>
-<h2>No weź kliknij w buźkę ( ͡° ͜ʖ ͡°)</h2>
-<a class="btn btn-primary" href="/addUser" role="button">( ͡° ͜ʖ ͡°)</a> <!-- link w HTML -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 
+    <style>
+    body {
+        background-color: #f3f2ef;
+        margin: 0;
+        padding: 0;
+        text-align:center;
+    }
+    h1 {
+        font-size: 100 px;
+        padding: 30 px;
+    }
+    </style>    
+    <meta charset="UTF-8">
+    <title>Narkotyki- ankieta</title>
+    
+</head>
+
+<body >
+    <nav class="navbar navbar-light" style="background-color: rgb(22,8,109);">
+    <div class="container">
+        <div class="row align-items-center" >
+              <div class="col">
+                <a href="#zespol" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Zespół</a>
+              </div>
+              <div class="col">
+                
+              </div>
+              <div class="col">
+                
+              </div>
+              <div class="col">
+                
+            </div>
+            <div class="col">
+                
+            </div>
+              
+        </div>
+    </div>
+</nav>
+
+<div class="container" >
+        <div class="row align-items-center">
+              <div class="col">
+                
+              </div>
+              <div class="col-10">
+                <h1>Narkotyki- ankieta</h1>
+              </div>
+              <div class="col">
+                
+              </div>
+        </div>
+</div>
+<div class="container">
+    <div class="row align-items-center">
+          <div class="col">
+            
+          </div>
+          <div class="col-10">
+            <p class="lead" class="text-primary">Cześć! Przygotowaliśmy kilka pytań na temat świadomości społecześtwa o substancjach psychoaktywnych i ich skutkach. Zapraszamy Cię do wypełnienia ankiety!</p>
+          </div>
+          <div class="col">
+            
+          </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row align-items-center">
+          <div class="col">
+            
+          </div>
+          <div class="col">
+            
+          </div>
+          <div class="col">
+            <div class="buttons"><a class="btn btn-primary" role="button" href="/addUser" style="background-color: rgb(22,8,109);">Uzupełnij ankietę!</a></div>
+          </div>
+          <div class="col">
+            
+        </div>
+        <div class="col">
+            
+        </div>
+          
+    </div>
+</div>
 
 </body>
 </html>
