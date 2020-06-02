@@ -1,7 +1,7 @@
 from flask import Flask, session
 from flask_sqlalchemy import SQLAlchemy
 # from formapp.user_database import SpecificDrug
-from sqlalchemy.ext.declarative import declared_attr
+# from sqlalchemy.ext.declarative import declared_attr # obecnie niepotrzbne
 
 # Tutaj należy umieścić importy do formularza
 

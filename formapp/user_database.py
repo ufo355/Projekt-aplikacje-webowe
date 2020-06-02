@@ -1,5 +1,3 @@
-from sqlalchemy.ext.declarative import declared_attr
-
 from formapp import db # import obiektu db z pliku __init__.py
 
 
@@ -113,8 +111,8 @@ def specific_drug_check():
         db.session.commit()
 
 
-''' Zostawiam w razie czego, może się przyda klasa (tabel) abstracyjna jeszcze '''
-
+''' Zostawiam w razie czego, może się przyda klasa (tabel) abstracyjna jeszcze 
+    A tutaj include jakby był potrzebny: from sqlalchemy.ext.declarative import declared_attr'''
 # class Gibon(db.Model): # definiowanie Klasy tabeli abstrakcyjnej do używek
 #     __abstract__ = True
 #     @declared_attr

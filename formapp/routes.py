@@ -100,6 +100,108 @@ def save_drug_form():
     return redirect('/drugQuestionsForm')    # powrót na stronę głóną
 
 
+@app.route('/list', methods=['GET', 'POST'])
+def list():
+    alcohol = 0
+    cocaine = 0
+    heroine = 0
+    meta = 0
+    tobacco = 0
+    amfa = 0
+    marihuana = 0
+    mdma = 0
+    mefedron = 0
+    lsd = 0
+    psylocibine = 0
+    ketamine = 0
+    dxm = 0
+    dmt = 0
+
+    result = Drug.query.all()
+    for i in result:
+        if i.id_drug == 1:
+            alcohol += 1
+        else:
+            alcohol += 0
+
+    for i in result:
+        if i.id_drug == 2:
+            cocaine += 1
+        else:
+            cocaine += 0
+
+    for i in result:
+        if i.id_drug == 3:
+            heroine += 1
+        else:
+            heroine += 0
+    for i in result:
+        if i.id_drug == 4:
+            meta += 1
+        else:
+            meta += 0
+    for i in result:
+        if i.id_drug == 5:
+            tobacco += 1
+        else:
+            tobacco += 0
+    for i in result:
+        if i.id_drug == 6:
+            amfa += 1
+        else:
+            amfa += 0
+    for i in result:
+        if i.id_drug == 7:
+            marihuana += 1
+        else:
+            marihuana += 0
+    for i in result:
+        if i.id_drug == 8:
+            mdma += 1
+        else:
+            mdma += 0
+    for i in result:
+        if i.id_drug == 9:
+            mefedron += 1
+        else:
+            mefedron += 0
+    for i in result:
+        if i.id_drug == 10:
+            lsd += 1
+        else:
+            lsd += 0
+    for i in result:
+        if i.id_drug == 11:
+            psylocibine += 1
+        else:
+            psylocibine += 0
+    for i in result:
+        if i.id_drug == 12:
+            ketamine += 1
+        else:
+            ketamine += 0
+    for i in result:
+        if i.id_drug == 13:
+            dxm += 1
+        else:
+            dxm += 0
+    for i in result:
+        if i.id_drug == 14:
+            dmt += 1
+        else:
+            dmt += 0
+
+
+    return render_template('Result.html',
+                           result =result, alcohol = alcohol,
+                           cocaine = cocaine, heroine = heroine,
+                           meta = meta, tobacco = tobacco,
+                           amfa = amfa, marihuana = marihuana,
+                           mdma = mdma, mefedron = mefedron,
+                           lsd = lsd, psylocibine = psylocibine,
+                           ketamine = ketamine, dxm = dxm, dmt = dmt)
+
+
 specific_drug_check() # tafunkcja robi to co kod poniżej (zostawiłem tutaj na zaś, wystarczy odkomentować)
 # aha, jakby ktoś się dziwił czemu to jest tutaj, a nie w __init__.py
 # to jest w tym miejscu, ponieważ cały ten plik (czyli routes.py) jest importowany

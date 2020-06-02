@@ -25,13 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab9b0642-93bf-4be3-acd3-c435d575f506" name="Default Changelist" comment="Fomularzy i usunięcie niepotrzebnych komentarzy">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="ab9b0642-93bf-4be3-acd3-c435d575f506" name="Default Changelist" comment="Formularzyk dodaje sie elegancko do tabeli Drug w bazie danych">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0be4661b-54cb-40cc-9881-9242766b9144.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/formapp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/formapp/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/formapp/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/formapp/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/formapp/templates/drugQuestionsForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/formapp/templates/drugQuestionsForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/formapp/user_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/formapp/user_database.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +119,9 @@
       <workItem from="1590663870473" duration="880000" />
       <workItem from="1590680023224" duration="3373000" />
       <workItem from="1590738301136" duration="14610000" />
-      <workItem from="1590998101576" duration="4774000" />
+      <workItem from="1590998101576" duration="7004000" />
+      <workItem from="1591045929362" duration="600000" />
+      <workItem from="1591127111608" duration="578000" />
     </task>
     <task id="LOCAL-00001" summary="Dodałęm Bartkową częsć - (dodałęm też do commita jakieś pliki z workspacea, nw cy komuś to nie pobruździ w pycharmie XDDD)">
       <created>1590741398033</created>
@@ -152,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591000131933</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Formularzyk dodaje sie elegancko do tabeli Drug w bazie danych">
+      <created>1591003023833</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591003023833</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +192,8 @@
     <MESSAGE value="Dodałęm Bartkową częsć - (dodałęm też do commita jakieś pliki z workspacea, nw cy komuś to nie pobruździ w pycharmie XDDD)" />
     <MESSAGE value="TAAAAAAAAK- Dodałem kod matiego i zaadoptowałem do przełączania formularzy #killme. Ale powinno działać" />
     <MESSAGE value="Fomularzy i usunięcie niepotrzebnych komentarzy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fomularzy i usunięcie niepotrzebnych komentarzy" />
+    <MESSAGE value="Formularzyk dodaje sie elegancko do tabeli Drug w bazie danych" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formularzyk dodaje sie elegancko do tabeli Drug w bazie danych" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2590" y="127" key="#Flask" timestamp="1590662917980">
@@ -211,49 +218,50 @@
     </state>
     <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591002302671" />
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590662916541" />
-    <state width="1493" height="181" key="GridCell.Tab.0.bottom" timestamp="1591002477890">
+    <state width="1493" height="181" key="GridCell.Tab.0.bottom" timestamp="1591019041013">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1590680284006">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom.inPresentationMode/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590680284006" />
-    <state width="1493" height="181" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591002477890" />
+    <state width="1493" height="181" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591019041013" />
     <state width="1877" height="244" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590756118706" />
-    <state width="1493" height="181" key="GridCell.Tab.0.center" timestamp="1591002477890">
+    <state width="1493" height="181" key="GridCell.Tab.0.center" timestamp="1591019041012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1590680284006">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center.inPresentationMode/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590680284006" />
-    <state width="1493" height="181" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591002477890" />
+    <state width="1493" height="181" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591019041012" />
     <state width="1877" height="244" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590756118706" />
-    <state width="1493" height="181" key="GridCell.Tab.0.left" timestamp="1591002477890">
+    <state width="1493" height="181" key="GridCell.Tab.0.left" timestamp="1591019041011">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1590680284005">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left.inPresentationMode/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590680284005" />
-    <state width="1493" height="181" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591002477890" />
+    <state width="1493" height="181" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591019041011" />
     <state width="1877" height="244" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590756118706" />
-    <state width="1493" height="181" key="GridCell.Tab.0.right" timestamp="1591002477890">
+    <state width="1493" height="181" key="GridCell.Tab.0.right" timestamp="1591019041012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1590680284006">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right.inPresentationMode/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590680284006" />
-    <state width="1493" height="181" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591002477890" />
+    <state width="1493" height="181" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591019041012" />
     <state width="1877" height="244" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590756118706" />
     <state x="2635" y="124" key="SettingsEditor" timestamp="1590680540196">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2635" y="124" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590680540196" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1590752240938">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1591003100633">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591003100633" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590752240938" />
     <state x="349" y="67" key="com.intellij.database.dbimport.ImportDialog" timestamp="1591002226763">
       <screen x="0" y="0" width="1536" height="824" />
