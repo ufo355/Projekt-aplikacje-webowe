@@ -6,6 +6,13 @@ from flask import render_template, request, redirect, session, url_for
 
 # Tutaj też trzeba (chyba) umieścić ewntualne funkcje POST itd.\
 db.create_all()
+
+specific_drug_check() # tafunkcja robi to co kod poniżej (zostawiłem tutaj na zaś, wystarczy odkomentować)
+# aha, jakby ktoś się dziwił czemu to jest tutaj, a nie w __init__.py
+# to jest w tym miejscu, ponieważ cały ten plik (czyli routes.py) jest importowany
+# na końcu pliku init. Gdyby osobno importować tam ta funkcję, to są problemy z importami
+
+
 @app.route('/') # ten fragment przekierowuje do formularza HTML
 def hello_world():
     print("Poszło hello_world")                             # info o odpaleniu stronki
@@ -116,80 +123,194 @@ def list():
     ketamine = 0
     dxm = 0
     dmt = 0
-
+    alcohol_self_dmg = 0
+    alcohol_self_avg = 0
+    alcohol_society = 0
+    alcohol_society_avg = 0
+    heroine_self_dmg = 0
+    heroine_self_avg = 0
+    heroine_society = 0
+    heroine_society_avg = 0
+    cocaine_self_dmg = 0
+    cocaine_self_avg = 0
+    cocaine_society = 0
+    cocaine_society_avg = 0
+    meta_self_dmg = 0
+    meta_self_avg = 0
+    meta_society = 0
+    meta_society_avg = 0
+    tobacco_self_dmg = 0
+    tobacco_self_avg = 0
+    tobacco_society = 0
+    tobacco_society_avg = 0
+    amfa_self_dmg = 0
+    amfa_self_avg = 0
+    amfa_society = 0
+    amfa_society_avg = 0
+    marihuana_self_dmg = 0
+    marihuana_self_avg = 0
+    marihuana_society = 0
+    marihuana_society_avg = 0
+    mdma_self_dmg = 0
+    mdma_self_avg = 0
+    mdma_society = 0
+    mdma_society_avg = 0
+    mefedron_self_dmg = 0
+    mefedron_self_avg = 0
+    mefedron_society = 0
+    mefedron_society_avg = 0
+    lsd_self_dmg = 0
+    lsd_self_avg = 0
+    lsd_society = 0
+    lsd_society_avg = 0
+    psylocibine_self_dmg = 0
+    psylocibine_self_avg = 0
+    psylocibine_society = 0
+    psylocibine_society_avg = 0
+    ketamine_self_dmg = 0
+    ketamine_self_avg = 0
+    ketamine_society = 0
+    ketamine_society_avg = 0
+    dxm_self_dmg = 0
+    dxm_self_avg = 0
+    dxm_society = 0
+    dxm_society_avg = 0
+    dmt_self_dmg = 0
+    dmt_self_avg = 0
+    dmt_society = 0
+    dmt_society_avg = 0
     result = Drug.query.all()
     for i in result:
         if i.id_drug == 1:
             alcohol += 1
+            alcohol_self_dmg += i.self_dmg_weight_avg
+            alcohol_self_avg = alcohol_self_dmg/alcohol
+            alcohol_society += i.society_dmg_weight_avg
+            alcohol_society_avg = alcohol_society/alcohol
         else:
             alcohol += 0
 
+
     for i in result:
         if i.id_drug == 2:
-            cocaine += 1
+            heroine += 1
+            heroine_self_dmg += i.self_dmg_weight_avg
+            heroine_self_avg = heroine_self_dmg/heroine
+            heroine_society += i.society_dmg_weight_avg
+            heroine_society_avg = heroine_society/heroine
         else:
-            cocaine += 0
+            heroine += 0
 
     for i in result:
         if i.id_drug == 3:
-            heroine += 1
+            cocaine += 1
+            cocaine_self_dmg += i.self_dmg_weight_avg
+            cocaine_self_avg = cocaine_self_dmg/cocaine
+            cocaine_society += i.society_dmg_weight_avg
+            cocaine_society_avg = cocaine_society/cocaine
         else:
-            heroine += 0
+            cocaine += 0
     for i in result:
         if i.id_drug == 4:
             meta += 1
+            meta_self_dmg += i.self_dmg_weight_avg
+            meta_self_avg = meta_self_dmg/meta
+            meta_society += i.society_dmg_weight_avg
+            meta_society_avg = meta_society/meta
         else:
             meta += 0
     for i in result:
         if i.id_drug == 5:
             tobacco += 1
+            tobacco_self_dmg += i.self_dmg_weight_avg
+            tobacco_self_avg = tobacco_self_dmg/tobacco
+            tobacco_society += i.society_dmg_weight_avg
+            tobacco_society_avg = tobacco_society/tobacco
+
         else:
             tobacco += 0
     for i in result:
         if i.id_drug == 6:
             amfa += 1
+            amfa_self_dmg += i.self_dmg_weight_avg
+            amfa_self_avg = amfa_self_dmg/amfa
+            amfa_society += i.society_dmg_weight_avg
+            amfa_society_avg = amfa_society/amfa
         else:
             amfa += 0
     for i in result:
         if i.id_drug == 7:
             marihuana += 1
+            marihuana_self_dmg += i.self_dmg_weight_avg
+            marihuana_self_avg = marihuana_self_dmg/marihuana
+            marihuana_society += i.society_dmg_weight_avg
+            marihuana_society_avg = marihuana_society/marihuana
         else:
             marihuana += 0
     for i in result:
         if i.id_drug == 8:
             mdma += 1
+            mdma_self_dmg += i.self_dmg_weight_avg
+            mdma_self_avg = mdma_self_dmg/mdma
+            mdma_society += i.society_dmg_weight_avg
+            mdma_society_avg = mdma_society/mdma
         else:
             mdma += 0
     for i in result:
         if i.id_drug == 9:
             mefedron += 1
+            mefedron_self_dmg += i.self_dmg_weight_avg
+            mefedron_self_avg = mefedron_self_dmg/mefedron
+            mefedron_society += i.society_dmg_weight_avg
+            mefedron_society_avg = mefedron_society/mefedron
         else:
             mefedron += 0
     for i in result:
         if i.id_drug == 10:
             lsd += 1
+            lsd_self_dmg += i.self_dmg_weight_avg
+            lsd_self_avg = lsd_self_dmg/lsd
+            lsd_society += i.society_dmg_weight_avg
+            lsd_society_avg = lsd_society/lsd
         else:
             lsd += 0
     for i in result:
         if i.id_drug == 11:
             psylocibine += 1
+            psylocibine_self_dmg += i.self_dmg_weight_avg
+            psylocibine_self_avg = psylocibine_self_dmg/psylocibine
+            psylocibine_society += i.society_dmg_weight_avg
+            psylocibine_society_avg = psylocibine_society/psylocibine
         else:
             psylocibine += 0
     for i in result:
         if i.id_drug == 12:
             ketamine += 1
+            ketamine_self_dmg += i.self_dmg_weight_avg
+            ketamine_self_avg = ketamine_self_dmg/ketamine
+            ketamine_society += i.society_dmg_weight_avg
+            ketamine_society_avg = ketamine_society/ketamine
         else:
             ketamine += 0
     for i in result:
         if i.id_drug == 13:
             dxm += 1
+            dxm_self_dmg += i.self_dmg_weight_avg
+            dxm_self_avg = dxm_self_dmg/dxm
+            dxm_society += i.society_dmg_weight_avg
+            dxm_society_avg = dxm_society/dxm
         else:
             dxm += 0
     for i in result:
         if i.id_drug == 14:
             dmt += 1
+            dmt_self_dmg += i.self_dmg_weight_avg
+            dmt_self_avg = dmt_self_dmg/dmt
+            dmt_society += i.society_dmg_weight_avg
+            dmt_society_avg = dmt_society/dmt
         else:
             dmt += 0
+
 
 
     return render_template('Result.html',
@@ -199,11 +320,22 @@ def list():
                            amfa = amfa, marihuana = marihuana,
                            mdma = mdma, mefedron = mefedron,
                            lsd = lsd, psylocibine = psylocibine,
-                           ketamine = ketamine, dxm = dxm, dmt = dmt)
+                           ketamine = ketamine, dxm = dxm, dmt = dmt,
+                           alcohol_self_avg = alcohol_self_avg, alcohol_society_avg = alcohol_society_avg,
+                           heroine_self_avg = heroine_self_avg, heroine_society_avg = heroine_society_avg,
+                           cocaine_self_avg = cocaine_self_avg, cocaine_society_avg = cocaine_society_avg,
+                           meta_self_avg = meta_self_avg, meta_society_avg = meta_society_avg,
+                           tobacco_self_avg = tobacco_self_avg, tobacco_society_avg = tobacco_society_avg,
+                           amfa_self_avg = amfa_self_avg, amfa_society_avg = amfa_society_avg,
+                           marihuana_self_avg = marihuana_self_avg, marihuana_society_avg = marihuana_society_avg,
+                           mdma_self_avg = mdma_self_avg, mdma_society_avg = mdma_society_avg,
+                           mefedron_self_avg = mefedron_self_avg, mefedron_society_avg = mefedron_society_avg,
+                           lsd_self_avg = lsd_self_avg, lsd_society_avg = lsd_society_avg,
+                           psylocibine_self_avg = psylocibine_self_avg, psylocibine_society_avg = psylocibine_society_avg,
+                           ketamine_self_avg = ketamine_self_avg, ketamine_society_avg = ketamine_society_avg,
+                           dxm_self_avg = dxm_self_avg, dxm_society_avg = dxm_society_avg,
+                           dmt_self_avg = dmt_self_avg, dmt_society_avg = dmt_society_avg
+                           )
 
 
-specific_drug_check() # tafunkcja robi to co kod poniżej (zostawiłem tutaj na zaś, wystarczy odkomentować)
-# aha, jakby ktoś się dziwił czemu to jest tutaj, a nie w __init__.py
-# to jest w tym miejscu, ponieważ cały ten plik (czyli routes.py) jest importowany
-# na końcu pliku init. Gdyby osobno importować tam ta funkcję, to są problemy z importami
 
