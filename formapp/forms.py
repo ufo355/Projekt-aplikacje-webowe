@@ -21,7 +21,7 @@ class AddUserForm(FlaskForm):
     -age - pole numeryczne do którego zapisywany jest wiek
     -drugs -zmodyfikowana lista rozwijana wielokrotnego wyboru, tak, że wygląda jak odpowiedź wielokrotnego wyboru'''
     sex = SelectField('Płeć:',choices=[('m','Mężczyzna'),('k','Kobieta')])
-    city = StringField('City:')
+    city = IntegerField('Przybliżona liczba mieszkańców Twojego miasta:')
     age = IntegerField('age :')
     '''opcje do tego pola formularza zaciągane są z bazy danych'''
     drugs = MultiCheckboxField('Drugs', coerce=int)

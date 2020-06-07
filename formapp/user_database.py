@@ -5,7 +5,7 @@ class User(db.Model): # definiowanie tabeli
     __tablename__ = 'user_data'
     id = db.Column(db.Integer, primary_key=True)
     sex = db.Column(db.CHAR)
-    town = db.Column(db.String)
+    town = db.Column(db.Integer)
     age = db.Column(db.Integer)
     selected_drugs = db.relationship("Drug", backref= "user_data")
 
