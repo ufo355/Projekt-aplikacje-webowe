@@ -132,7 +132,7 @@ def list():
       
     return render_template('Result.html',self_damage_average = self_damage_average, society_damage_average = society_damage_average, number_of_drugs = number_of_drugs)
 
-@app.route('/list', methods=['GET', 'POST'])
+@app.route('/info', methods=['GET', 'POST'])
 def info():
     '''strona z informacjami o ankiecie'''
     return render_template('info.html')

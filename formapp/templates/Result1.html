@@ -1,0 +1,27 @@
+{% block content %}
+<div class="jumbotron">
+    <h1>Wyniki</h1>
+    <h2> Alkohol: </h2>
+        <p> Liczba wyborów: {{number_of_drugs[0][1]}}</p>
+        <p> Szkodliwość na własny organizm: {{self_damage_average[0][1]}}</p>
+        <p> Szkodliwość dla społeczeństwa: {{society_damage_average[0][1]}}</p>
+    <h2> Heroina:</h2>
+        <p> Liczba wyborów:{{number_of_drugs[1][1]}} </p>
+        <p> Szkodliwość na własny organizm: {{self_damage_average[1][1]}}</p>
+        <p> Szkodliwość dla społeczeństwa: {{society_damage_average[2][1]}}</p>
+    <h2> Kokaina:</h2>
+        <p> Liczba wyborów: {{number_of_drugs[2][1]}}</p>
+        <p> Szkodliwość na własny organizm: {{self_damage_average[2][1]}}</p>
+        <p> Szkodliwość dla społeczeństwa: {{society_damage_average[2][1]}}</p>
+
+      <table>
+            <tr>
+                <td>
+                </td>
+                <td width="20"></td>
+            </tr>
+
+        </table>
+  </form>
+</div>
+{% endblock %}

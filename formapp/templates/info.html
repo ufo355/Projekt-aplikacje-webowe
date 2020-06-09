@@ -1,10 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <style>
+    body {
+        background-color: #f3f2ef;
+        margin: 0;
+        padding: 0;
+        text-align:center;
+    }
+    h1 {
+        font-size: 100 px;
+        padding: 30 px;
+    }
+    </style>    
     <meta charset="UTF-8">
-    <title>Info</title>
+    <title>Narkotyki- ankieta</title>
+    
 </head>
-<body>
+
+<body >
+    <nav class="navbar navbar-light" style="background-color: rgb(22,8,109);">
+    <div class="container">
+        <div class="row align-items-center" >
+              <div class="col">
+                <a href="/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Strona główna</a>
+              </div>
+              <div class="col">
+                <a href="/info" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">O ankiecie</a>
+              </div>
+              <div class="col">
+                <a href="/list" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Rezultaty</a>
+              </div>
+              <div class="col">
+                
+            </div>
+            <div class="col">
+                
+            </div>
+              
+        </div>
+    </div>
+</nav>
+
+<div class="container" >
+        <div class="row align-items-center">
+              <div class="col">
+                
+              </div>
+              <div class="col-10">
+                <h1>Narkotyki- ankieta</h1>
+              </div>
+              <div class="col">
+                
+              </div>
+        </div>
+</div>
+<div class="container">
+    <div class="row align-items-center">
+          <div class="col">
+            
+          </div>
+          <div class="col-10">
+            <p class="lead" class="text-primary">Cześć! Jesteśmy studentami Inżynierii Biomedycznej, a nasze badanie zostało wykonane na potrzeby projektu z przedmiotów tj. Projektowanie aplikacji webowych oraz Metody i narzędzia badawcze w naukach społecznych. Zamysłem samego badania było sprawdzenie czy społeczeństwo jest świadome które substancje psychoaktywne mają większą szkodliwość dla osoby zażywającej, jak i dla społeczeństwa. Również chcieliśmy sprawdzić, czy ludzie popierają dekryminalizowanie substancji psychoaktywnych. Walidacja otrzymanych danych została wykonana w oparciu o badanie naukowe pt. „Development of a rational scale to assess the harm of drugs of potential misune” którego autorami byli: David Nutt, Leslie A King, William Saulsbury, Colin Blakemore. Projekt umożliwia porównanie odpowiedzi osoby uzupełniającej ankietę z faktycznymi szkodliwościami substancji psychoaktywnych udowodnionych naukowo w wspomnianym artykule. Wyniki badania są wykorzystywane tylko na potrzeby projektu, a podczas wypełniania ankiety żadne wrażliwe dane nie będą rejestrowane. Pozdrawiamy!</p>
+          </div>
+          <div class="col">
+            
+          </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row align-items-center">
+          <div class="col">
+            
+          </div>
+          <div class="col">
+            
+          </div>
+          <div class="col">
+            <div class="buttons"><a class="btn btn-primary" role="button" href="/" style="background-color: rgb(22,8,109);">Powrót</a></div>
+          </div>
+          <div class="col">
+            
+        </div>
+        <div class="col">
+            
+        </div>
+          
+    </div>
+</div>
 
 </body>
 </html>
