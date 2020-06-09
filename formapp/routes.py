@@ -1,4 +1,4 @@
-from formapp import app
+from formapp import app, db
 from formapp.forms import AddUserForm
 from formapp.user_database import User, SpecificDrug, Drug, specific_drug_check
 from flask import render_template, request, redirect, session, url_for
