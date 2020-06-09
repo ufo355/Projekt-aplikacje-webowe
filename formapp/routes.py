@@ -1,4 +1,4 @@
-from formapp import app, db
+from formapp import app
 from formapp.forms import AddUserForm
 from formapp.user_database import User, SpecificDrug, Drug, specific_drug_check
 from flask import render_template, request, redirect, session, url_for
@@ -6,9 +6,9 @@ import numpy as np
 
 
 # Tutaj też trzeba (chyba) umieścić ewntualne funkcje POST itd.\
-db.create_all()
+#db.create_all()
 
-specific_drug_check() # tafunkcja robi to co kod poniżej (zostawiłem tutaj na zaś, wystarczy odkomentować)
+#specific_drug_check() # tafunkcja robi to co kod poniżej (zostawiłem tutaj na zaś, wystarczy odkomentować)
 # aha, jakby ktoś się dziwił czemu to jest tutaj, a nie w __init__.py
 # to jest w tym miejscu, ponieważ cały ten plik (czyli routes.py) jest importowany
 # na końcu pliku init. Gdyby osobno importować tam ta funkcję, to są problemy z importami

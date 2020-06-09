@@ -84,31 +84,31 @@ class Drug(db.Model): # tabela z wynikamoi na odpowiedzi do pytań i narkotyków
 
 
 def specific_drug_check():
+    #rows = db.session.query(SpecificDrug).count()
+    #print("Current number of records in 'specific_drug':", rows)
+    #if rows == 14:  # proste zabezpieczenie, aby baza danych miała naszą liste narkotyków przy starcie
+        #pass  # aplikacji. Prosta bo nie sprawdza na bieżaco, ani nie czy ktoś coś podmienił
+    #else:
+        #db.session.query(SpecificDrug).delete()
+    d1 = SpecificDrug('Alkohol')  # Tworzę obiekty klasy Drug_name (rekordy tabeli)
+    d2 = SpecificDrug('Heroina')
+    d3 = SpecificDrug('Kokaina')
+    d4 = SpecificDrug('Metaamfetamina')
+    d5 = SpecificDrug('Tytoń')
+    d6 = SpecificDrug('Amfetamina')
+    d7 = SpecificDrug('Marihuana')
+    d8 = SpecificDrug('MDMA')
+    d9 = SpecificDrug('Mefedron')
+    d10 = SpecificDrug('LSD')
+    d11 = SpecificDrug('Psylocybina')
+    d12 = SpecificDrug('Ketamina')
+    d13 = SpecificDrug('DXM')
+    d14 = SpecificDrug('DMT')
+    db.session.add_all([d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14])
+    print("End of statement")
     rows = db.session.query(SpecificDrug).count()
-    print("Current number of records in 'specific_drug':", rows)
-    if rows == 14:  # proste zabezpieczenie, aby baza danych miała naszą liste narkotyków przy starcie
-        pass  # aplikacji. Prosta bo nie sprawdza na bieżaco, ani nie czy ktoś coś podmienił
-    else:
-        db.session.query(SpecificDrug).delete()
-        d1 = SpecificDrug('Alkohol')  # Tworzę obiekty klasy Drug_name (rekordy tabeli)
-        d2 = SpecificDrug('Heroina')
-        d3 = SpecificDrug('Kokaina')
-        d4 = SpecificDrug('Metaamfetamina')
-        d5 = SpecificDrug('Tytoń')
-        d6 = SpecificDrug('Amfetamina')
-        d7 = SpecificDrug('Marihuana')
-        d8 = SpecificDrug('MDMA')
-        d9 = SpecificDrug('Mefedron')
-        d10 = SpecificDrug('LSD')
-        d11 = SpecificDrug('Psylocybina')
-        d12 = SpecificDrug('Ketamina')
-        d13 = SpecificDrug('DXM')
-        d14 = SpecificDrug('DMT')
-        db.session.add_all([d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14])
-        print("End of statement")
-        rows = db.session.query(SpecificDrug).count()
-        print("After adding all:", rows)
-        db.session.commit()
+    print("After adding all:", rows)
+    db.session.commit()
 
 
 ''' Zostawiam w razie czego, może się przyda klasa (tabel) abstracyjna jeszcze 
