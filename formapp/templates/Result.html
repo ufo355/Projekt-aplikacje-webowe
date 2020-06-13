@@ -66,20 +66,20 @@ function drawChartAverageHarmfulnessSociety() {
 function drawChartPopularity() {
   var data = google.visualization.arrayToDataTable([
   ['Narkotyk', 'Procentowa ilość kliknięć',],
-  ['Alkohol', 198],
-  ['Kokaina',3 ],
-  ['Heroina',2],
-  ['Metamfetamina',2],
-  ['Tabaka', 10],
-  ['Amfetamina', 3],
-  ['Marihuana', 79],
-  ['MDMA', 5],
-  ['Mefedron', 7],
-  ['LSD', 4],
-  ['Psylocybina', 4],
-  ['Ketamina', 5],
-  ['DXM',3],
-  ['DMT', 3],
+  ['Alkohol', {{ number_of_drugs[0][1] }} ],
+  ['Kokaina',{{ number_of_drugs[1][1] }} ],
+  ['Heroina',{{ number_of_drugs[2][1] }}],
+  ['Metamfetamina',{{ number_of_drugs[3][1] }}],
+  ['Tabaka', {{ number_of_drugs[4][1] }}],
+  ['Amfetamina', {{ number_of_drugs[5][1] }}],
+  ['Marihuana', {{ number_of_drugs[6][1] }}],
+  ['MDMA', {{ number_of_drugs[7][1] }}],
+  ['Mefedron', {{ number_of_drugs[8][1] }}],
+  ['LSD', {{ number_of_drugs[9][1] }}],
+  ['Psylocybina', {{ number_of_drugs[10][1] }}],
+  ['Ketamina', {{ number_of_drugs[11][1] }}],
+  ['DXM',{{ number_of_drugs[12][1] }}],
+  ['DMT', {{ number_of_drugs[13][1] }}]
   ]);
 
   var options = {title:'Zestawienie procentowe wyborów substancji w ankiecie', width:'100%', height:'550'};
